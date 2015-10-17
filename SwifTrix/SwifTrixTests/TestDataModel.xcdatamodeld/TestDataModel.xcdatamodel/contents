@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9056" systemVersion="15B30a" minimumToolsVersion="Xcode 7.0">
+    <entity name="Book" representedClassName=".Book" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bookworm" inverseName="books" inverseEntity="Bookworm" syncable="YES"/>
+        <relationship name="pages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Page" inverseName="book" inverseEntity="Page" syncable="YES"/>
+    </entity>
+    <entity name="Bookworm" representedClassName=".Bookworm" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Book" inverseName="owner" inverseEntity="Book" syncable="YES"/>
+    </entity>
+    <entity name="Page" representedClassName=".Page" syncable="YES">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="pages" inverseEntity="Book" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Book" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Page" positionX="-54" positionY="0" width="128" height="75"/>
+        <element name="Bookworm" positionX="-36" positionY="36" width="128" height="75"/>
+    </elements>
+</model>
