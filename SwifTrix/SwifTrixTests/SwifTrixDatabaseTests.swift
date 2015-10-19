@@ -65,7 +65,7 @@ class SwifTrixDatabaseTests: XCTestCase {
                 
                 STDatabase.SharedDatabase!.save()
                 
-                guard let allBooks: [Book] = STDatabase.SharedDatabase?.fetchObjectsWithType("Book") else {
+                guard let allBooks: [Book] = STDatabase.SharedDatabase?.fetchObjectsWithType("Book") where allBooks.count == 1 else {
                     XCTFail("Expected one book to be saved")
                     return
                 }

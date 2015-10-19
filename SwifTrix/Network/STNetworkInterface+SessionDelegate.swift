@@ -1,5 +1,5 @@
 //
-//  STDatabase+ChangeManagement.swift
+//  STNetworkInterface+SessionDelegate.swift
 //  SwifTrix
 //
 // The MIT License (MIT)
@@ -25,30 +25,17 @@
 // THE SOFTWARE.
 
 import Foundation
-import CoreData
 
-public extension STDatabase {
+extension STNetworkInterface: NSURLSessionDelegate {
+    public func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
+        print("Warning: Not implemented")
+    }
     
-    /**
-     Function that saves the database state for both the asynchronous and main context.
-     */
-    public func save() {
-        do {
-            // Save main context
-            try self.mainContext.save()
-            
-            // Save asynchronous context on its own queue
-            self.asyncContext.performBlock({
-                do {
-                    try self.asyncContext.save()
-                } catch let error as NSError {
-                    print("Error while saving asynchronous database:")
-                    print(error.localizedDescription)
-                }
-            })
-        } catch let error as NSError {
-            print("Error while saving database:")
-            print(error.localizedDescription)
-        }
+    public func URLSession(session: NSURLSession, didBecomeInvalidWithError error: NSError?) {
+        print("Warning: Not implemented")
+    }
+    
+    public func URLSessionDidFinishEventsForBackgroundURLSession(session: NSURLSession) {
+        print("Warning: Not implemented")
     }
 }

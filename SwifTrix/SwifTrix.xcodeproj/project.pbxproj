@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED00504E1BD4329D0043528B /* STJSONPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00504D1BD4329D0043528B /* STJSONPackage.swift */; };
+		ED0050501BD4331B0043528B /* STNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00504F1BD4331B0043528B /* STNetworkError.swift */; };
+		ED0050551BD43C2A0043528B /* STJSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0050541BD43C2A0043528B /* STJSONError.swift */; };
+		ED0050561BD447440043528B /* STJSONPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00504D1BD4329D0043528B /* STJSONPackage.swift */; };
+		ED0050571BD447440043528B /* STNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00504F1BD4331B0043528B /* STNetworkError.swift */; };
+		ED0050581BD447440043528B /* STJSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0050541BD43C2A0043528B /* STJSONError.swift */; };
+		ED0050591BD4474D0043528B /* STJSONPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00504D1BD4329D0043528B /* STJSONPackage.swift */; };
+		ED00505A1BD4474D0043528B /* STNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00504F1BD4331B0043528B /* STNetworkError.swift */; };
+		ED00505B1BD4474D0043528B /* STJSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0050541BD43C2A0043528B /* STJSONError.swift */; };
+		ED0050601BD452B90043528B /* STJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00505F1BD452B90043528B /* STJSONParser.swift */; };
+		ED0050611BD452B90043528B /* STJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00505F1BD452B90043528B /* STJSONParser.swift */; };
+		ED0050621BD452B90043528B /* STJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00505F1BD452B90043528B /* STJSONParser.swift */; };
+		ED0050641BD45EF10043528B /* SwifTrixJSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0050631BD45EF10043528B /* SwifTrixJSONParserTests.swift */; };
 		ED076CB91BCAA8C800B53396 /* SwifTrixPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED076CB81BCAA8C800B53396 /* SwifTrixPerformanceTests.swift */; };
 		ED076CBC1BCAAFC200B53396 /* TestDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED076CBA1BCAAFC200B53396 /* TestDataModel.xcdatamodeld */; };
 		ED076CC31BCAB0FE00B53396 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED076CBD1BCAB0FE00B53396 /* Book+CoreDataProperties.swift */; };
@@ -26,35 +39,35 @@
 		ED59EE911BD27BF300A8857E /* SwifTrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED59EE871BD27BF300A8857E /* SwifTrix.framework */; };
 		ED59EE961BD27BF300A8857E /* SwifTrixTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED59EE951BD27BF300A8857E /* SwifTrixTVTests.swift */; };
 		ED59EE9E1BD27C1300A8857E /* STKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67B91BD1168400E5C9EC /* STKeychain.swift */; };
-		ED59EE9F1BD27C1300A8857E /* STKeychain+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67BE1BD117B000E5C9EC /* STKeychain+Errors.swift */; };
+		ED59EE9F1BD27C1300A8857E /* STKeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67BE1BD117B000E5C9EC /* STKeychainError.swift */; };
 		ED59EEA01BD27C1300A8857E /* STKeychain+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67C11BD1200100E5C9EC /* STKeychain+Items.swift */; };
 		ED59EEA11BD27C1300A8857E /* STKeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67C41BD1358200E5C9EC /* STKeychainItem.swift */; };
 		ED59EEA21BD27C1300A8857E /* STKeychainGenericPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67C71BD135B800E5C9EC /* STKeychainGenericPassword.swift */; };
 		ED59EEA31BD27C1300A8857E /* STKeychainInternetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67CA1BD1391B00E5C9EC /* STKeychainInternetPassword.swift */; };
 		ED59EEA41BD27C1300A8857E /* STKeychainCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67CD1BD13CD400E5C9EC /* STKeychainCertificate.swift */; };
-		ED59EEA51BD27C1300A8857E /* STJSONInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67A91BD1113D00E5C9EC /* STJSONInterface.swift */; };
-		ED59EEA61BD27C1400A8857E /* STJSONInterface+SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67B51BD1139400E5C9EC /* STJSONInterface+SessionDelegate.swift */; };
+		ED59EEA51BD27C1300A8857E /* STNetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67A91BD1113D00E5C9EC /* STNetworkInterface.swift */; };
+		ED59EEA61BD27C1400A8857E /* STNetworkInterface+SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67B51BD1139400E5C9EC /* STNetworkInterface+SessionDelegate.swift */; };
 		ED59EEA71BD27C1400A8857E /* STDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D0FAD1BCA58A000D5695E /* STDatabase.swift */; };
 		ED59EEA81BD27C1400A8857E /* STDatabase+ChangeManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67AC1BD1117D00E5C9EC /* STDatabase+ChangeManagement.swift */; };
 		ED59EEA91BD27C1400A8857E /* STDatabase+FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67AD1BD1117D00E5C9EC /* STDatabase+FetchRequests.swift */; };
 		ED59EEAA1BD27C1400A8857E /* STDatabase+ObjectCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67AE1BD1117D00E5C9EC /* STDatabase+ObjectCreation.swift */; };
 		ED59EEAC1BD27C2500A8857E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED59EEAB1BD27C2500A8857E /* CoreData.framework */; };
 		ED59EEAE1BD27C2A00A8857E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED59EEAD1BD27C2A00A8857E /* Security.framework */; };
-		EDFF67AA1BD1113D00E5C9EC /* STJSONInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67A91BD1113D00E5C9EC /* STJSONInterface.swift */; };
-		EDFF67AB1BD1113D00E5C9EC /* STJSONInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67A91BD1113D00E5C9EC /* STJSONInterface.swift */; };
+		EDFF67AA1BD1113D00E5C9EC /* STNetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67A91BD1113D00E5C9EC /* STNetworkInterface.swift */; };
+		EDFF67AB1BD1113D00E5C9EC /* STNetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67A91BD1113D00E5C9EC /* STNetworkInterface.swift */; };
 		EDFF67AF1BD1117D00E5C9EC /* STDatabase+ChangeManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67AC1BD1117D00E5C9EC /* STDatabase+ChangeManagement.swift */; };
 		EDFF67B01BD1117D00E5C9EC /* STDatabase+ChangeManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67AC1BD1117D00E5C9EC /* STDatabase+ChangeManagement.swift */; };
 		EDFF67B11BD1117D00E5C9EC /* STDatabase+FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67AD1BD1117D00E5C9EC /* STDatabase+FetchRequests.swift */; };
 		EDFF67B21BD1117D00E5C9EC /* STDatabase+FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67AD1BD1117D00E5C9EC /* STDatabase+FetchRequests.swift */; };
 		EDFF67B31BD1117D00E5C9EC /* STDatabase+ObjectCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67AE1BD1117D00E5C9EC /* STDatabase+ObjectCreation.swift */; };
 		EDFF67B41BD1117D00E5C9EC /* STDatabase+ObjectCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67AE1BD1117D00E5C9EC /* STDatabase+ObjectCreation.swift */; };
-		EDFF67B61BD1139400E5C9EC /* STJSONInterface+SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67B51BD1139400E5C9EC /* STJSONInterface+SessionDelegate.swift */; };
-		EDFF67B71BD1139400E5C9EC /* STJSONInterface+SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67B51BD1139400E5C9EC /* STJSONInterface+SessionDelegate.swift */; };
+		EDFF67B61BD1139400E5C9EC /* STNetworkInterface+SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67B51BD1139400E5C9EC /* STNetworkInterface+SessionDelegate.swift */; };
+		EDFF67B71BD1139400E5C9EC /* STNetworkInterface+SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67B51BD1139400E5C9EC /* STNetworkInterface+SessionDelegate.swift */; };
 		EDFF67BA1BD1168400E5C9EC /* STKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67B91BD1168400E5C9EC /* STKeychain.swift */; };
 		EDFF67BB1BD1168400E5C9EC /* STKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67B91BD1168400E5C9EC /* STKeychain.swift */; };
 		EDFF67BD1BD116F100E5C9EC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF67BC1BD116F100E5C9EC /* Security.framework */; };
-		EDFF67BF1BD117B000E5C9EC /* STKeychain+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67BE1BD117B000E5C9EC /* STKeychain+Errors.swift */; };
-		EDFF67C01BD117B000E5C9EC /* STKeychain+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67BE1BD117B000E5C9EC /* STKeychain+Errors.swift */; };
+		EDFF67BF1BD117B000E5C9EC /* STKeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67BE1BD117B000E5C9EC /* STKeychainError.swift */; };
+		EDFF67C01BD117B000E5C9EC /* STKeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67BE1BD117B000E5C9EC /* STKeychainError.swift */; };
 		EDFF67C21BD1200100E5C9EC /* STKeychain+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67C11BD1200100E5C9EC /* STKeychain+Items.swift */; };
 		EDFF67C31BD1200100E5C9EC /* STKeychain+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67C11BD1200100E5C9EC /* STKeychain+Items.swift */; };
 		EDFF67C51BD1358200E5C9EC /* STKeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67C41BD1358200E5C9EC /* STKeychainItem.swift */; };
@@ -69,14 +82,14 @@
 		EDFF68081BD14BFA00E5C9EC /* SwifTrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFF67FE1BD14BF900E5C9EC /* SwifTrix.framework */; };
 		EDFF680D1BD14BFA00E5C9EC /* SwifTrixOSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF680C1BD14BFA00E5C9EC /* SwifTrixOSXTests.swift */; };
 		EDFF68151BD14C1500E5C9EC /* STKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67B91BD1168400E5C9EC /* STKeychain.swift */; };
-		EDFF68161BD14C1500E5C9EC /* STKeychain+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67BE1BD117B000E5C9EC /* STKeychain+Errors.swift */; };
+		EDFF68161BD14C1500E5C9EC /* STKeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67BE1BD117B000E5C9EC /* STKeychainError.swift */; };
 		EDFF68171BD14C1500E5C9EC /* STKeychain+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67C11BD1200100E5C9EC /* STKeychain+Items.swift */; };
 		EDFF68181BD14C1500E5C9EC /* STKeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67C41BD1358200E5C9EC /* STKeychainItem.swift */; };
 		EDFF68191BD14C1500E5C9EC /* STKeychainGenericPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67C71BD135B800E5C9EC /* STKeychainGenericPassword.swift */; };
 		EDFF681A1BD14C1500E5C9EC /* STKeychainInternetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67CA1BD1391B00E5C9EC /* STKeychainInternetPassword.swift */; };
 		EDFF681B1BD14C1500E5C9EC /* STKeychainCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67CD1BD13CD400E5C9EC /* STKeychainCertificate.swift */; };
-		EDFF681C1BD14C1500E5C9EC /* STJSONInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67A91BD1113D00E5C9EC /* STJSONInterface.swift */; };
-		EDFF681D1BD14C1500E5C9EC /* STJSONInterface+SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67B51BD1139400E5C9EC /* STJSONInterface+SessionDelegate.swift */; };
+		EDFF681C1BD14C1500E5C9EC /* STNetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67A91BD1113D00E5C9EC /* STNetworkInterface.swift */; };
+		EDFF681D1BD14C1500E5C9EC /* STNetworkInterface+SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67B51BD1139400E5C9EC /* STNetworkInterface+SessionDelegate.swift */; };
 		EDFF681E1BD14C1500E5C9EC /* STDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D0FAD1BCA58A000D5695E /* STDatabase.swift */; };
 		EDFF681F1BD14C1500E5C9EC /* STDatabase+ChangeManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67AC1BD1117D00E5C9EC /* STDatabase+ChangeManagement.swift */; };
 		EDFF68211BD14C1500E5C9EC /* STDatabase+ObjectCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF67AE1BD1117D00E5C9EC /* STDatabase+ObjectCreation.swift */; };
@@ -110,6 +123,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED00504D1BD4329D0043528B /* STJSONPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STJSONPackage.swift; path = Network/STJSONPackage.swift; sourceTree = "<group>"; };
+		ED00504F1BD4331B0043528B /* STNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STNetworkError.swift; path = Network/STNetworkError.swift; sourceTree = "<group>"; };
+		ED0050541BD43C2A0043528B /* STJSONError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STJSONError.swift; path = Network/STJSONError.swift; sourceTree = "<group>"; };
+		ED00505F1BD452B90043528B /* STJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STJSONParser.swift; path = "Network+Database/STJSONParser.swift"; sourceTree = "<group>"; };
+		ED0050631BD45EF10043528B /* SwifTrixJSONParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifTrixJSONParserTests.swift; sourceTree = "<group>"; };
 		ED076CB81BCAA8C800B53396 /* SwifTrixPerformanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwifTrixPerformanceTests.swift; sourceTree = "<group>"; };
 		ED076CBB1BCAAFC200B53396 /* TestDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestDataModel.xcdatamodel; sourceTree = "<group>"; };
 		ED076CBD1BCAB0FE00B53396 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -135,14 +153,14 @@
 		ED59EE971BD27BF300A8857E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED59EEAB1BD27C2500A8857E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		ED59EEAD1BD27C2A00A8857E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		EDFF67A91BD1113D00E5C9EC /* STJSONInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STJSONInterface.swift; path = Network/STJSONInterface.swift; sourceTree = "<group>"; };
+		EDFF67A91BD1113D00E5C9EC /* STNetworkInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STNetworkInterface.swift; path = Network/STNetworkInterface.swift; sourceTree = "<group>"; };
 		EDFF67AC1BD1117D00E5C9EC /* STDatabase+ChangeManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "STDatabase+ChangeManagement.swift"; path = "Database/STDatabase+ChangeManagement.swift"; sourceTree = "<group>"; };
 		EDFF67AD1BD1117D00E5C9EC /* STDatabase+FetchRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "STDatabase+FetchRequests.swift"; path = "Database/STDatabase+FetchRequests.swift"; sourceTree = "<group>"; };
 		EDFF67AE1BD1117D00E5C9EC /* STDatabase+ObjectCreation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "STDatabase+ObjectCreation.swift"; path = "Database/STDatabase+ObjectCreation.swift"; sourceTree = "<group>"; };
-		EDFF67B51BD1139400E5C9EC /* STJSONInterface+SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "STJSONInterface+SessionDelegate.swift"; path = "Network/STJSONInterface+SessionDelegate.swift"; sourceTree = "<group>"; };
+		EDFF67B51BD1139400E5C9EC /* STNetworkInterface+SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "STNetworkInterface+SessionDelegate.swift"; path = "Network/STNetworkInterface+SessionDelegate.swift"; sourceTree = "<group>"; };
 		EDFF67B91BD1168400E5C9EC /* STKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STKeychain.swift; path = Keychain/STKeychain.swift; sourceTree = "<group>"; };
 		EDFF67BC1BD116F100E5C9EC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		EDFF67BE1BD117B000E5C9EC /* STKeychain+Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "STKeychain+Errors.swift"; path = "Keychain/STKeychain+Errors.swift"; sourceTree = "<group>"; };
+		EDFF67BE1BD117B000E5C9EC /* STKeychainError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STKeychainError.swift; path = Keychain/STKeychainError.swift; sourceTree = "<group>"; };
 		EDFF67C11BD1200100E5C9EC /* STKeychain+Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "STKeychain+Items.swift"; path = "Keychain/STKeychain+Items.swift"; sourceTree = "<group>"; };
 		EDFF67C41BD1358200E5C9EC /* STKeychainItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STKeychainItem.swift; path = Keychain/STKeychainItem.swift; sourceTree = "<group>"; };
 		EDFF67C71BD135B800E5C9EC /* STKeychainGenericPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STKeychainGenericPassword.swift; path = Keychain/STKeychainGenericPassword.swift; sourceTree = "<group>"; };
@@ -213,6 +231,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED00505C1BD452190043528B /* Network+Database */ = {
+			isa = PBXGroup;
+			children = (
+				ED00505F1BD452B90043528B /* STJSONParser.swift */,
+			);
+			name = "Network+Database";
+			sourceTree = "<group>";
+		};
 		ED076CC91BCAB10100B53396 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +255,7 @@
 		ED3D0F891BCA580F00D5695E = {
 			isa = PBXGroup;
 			children = (
+				ED00505C1BD452190043528B /* Network+Database */,
 				EDFF67B81BD1165E00E5C9EC /* Security */,
 				EDFF67A81BD110FF00E5C9EC /* Network */,
 				ED3D0FAF1BCA58A600D5695E /* Database */,
@@ -270,6 +297,7 @@
 			children = (
 				ED076CC91BCAB10100B53396 /* Entities */,
 				ED3D0FA21BCA580F00D5695E /* SwifTrixKeychainTests.swift */,
+				ED0050631BD45EF10043528B /* SwifTrixJSONParserTests.swift */,
 				ED59EE7F1BD272F800A8857E /* SwifTrixDatabaseTests.swift */,
 				ED3D0FA41BCA580F00D5695E /* Info.plist */,
 				ED076CB81BCAA8C800B53396 /* SwifTrixPerformanceTests.swift */,
@@ -323,8 +351,11 @@
 		EDFF67A81BD110FF00E5C9EC /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				EDFF67A91BD1113D00E5C9EC /* STJSONInterface.swift */,
-				EDFF67B51BD1139400E5C9EC /* STJSONInterface+SessionDelegate.swift */,
+				EDFF67A91BD1113D00E5C9EC /* STNetworkInterface.swift */,
+				ED00504F1BD4331B0043528B /* STNetworkError.swift */,
+				EDFF67B51BD1139400E5C9EC /* STNetworkInterface+SessionDelegate.swift */,
+				ED00504D1BD4329D0043528B /* STJSONPackage.swift */,
+				ED0050541BD43C2A0043528B /* STJSONError.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -333,7 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				EDFF67B91BD1168400E5C9EC /* STKeychain.swift */,
-				EDFF67BE1BD117B000E5C9EC /* STKeychain+Errors.swift */,
+				EDFF67BE1BD117B000E5C9EC /* STKeychainError.swift */,
 				EDFF67C11BD1200100E5C9EC /* STKeychain+Items.swift */,
 				EDFF67C41BD1358200E5C9EC /* STKeychainItem.swift */,
 				EDFF67C71BD135B800E5C9EC /* STKeychainGenericPassword.swift */,
@@ -606,14 +637,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDFF67BA1BD1168400E5C9EC /* STKeychain.swift in Sources */,
+				ED0050601BD452B90043528B /* STJSONParser.swift in Sources */,
+				ED0050501BD4331B0043528B /* STNetworkError.swift in Sources */,
 				EDFF67C21BD1200100E5C9EC /* STKeychain+Items.swift in Sources */,
 				EDFF67AF1BD1117D00E5C9EC /* STDatabase+ChangeManagement.swift in Sources */,
-				EDFF67AA1BD1113D00E5C9EC /* STJSONInterface.swift in Sources */,
+				EDFF67AA1BD1113D00E5C9EC /* STNetworkInterface.swift in Sources */,
 				EDFF67CB1BD1391B00E5C9EC /* STKeychainInternetPassword.swift in Sources */,
-				EDFF67B61BD1139400E5C9EC /* STJSONInterface+SessionDelegate.swift in Sources */,
+				EDFF67B61BD1139400E5C9EC /* STNetworkInterface+SessionDelegate.swift in Sources */,
 				EDFF67C81BD135B900E5C9EC /* STKeychainGenericPassword.swift in Sources */,
+				ED00504E1BD4329D0043528B /* STJSONPackage.swift in Sources */,
 				EDFF67B11BD1117D00E5C9EC /* STDatabase+FetchRequests.swift in Sources */,
-				EDFF67BF1BD117B000E5C9EC /* STKeychain+Errors.swift in Sources */,
+				EDFF67BF1BD117B000E5C9EC /* STKeychainError.swift in Sources */,
+				ED0050551BD43C2A0043528B /* STJSONError.swift in Sources */,
 				EDFF67C51BD1358200E5C9EC /* STKeychainItem.swift in Sources */,
 				EDFF67B31BD1117D00E5C9EC /* STDatabase+ObjectCreation.swift in Sources */,
 				ED3D0FAE1BCA58A000D5695E /* STDatabase.swift in Sources */,
@@ -627,7 +662,8 @@
 			files = (
 				EDFF68261BD162C500E5C9EC /* STDatabase.swift in Sources */,
 				EDFF67CC1BD1391B00E5C9EC /* STKeychainInternetPassword.swift in Sources */,
-				EDFF67B71BD1139400E5C9EC /* STJSONInterface+SessionDelegate.swift in Sources */,
+				ED0050641BD45EF10043528B /* SwifTrixJSONParserTests.swift in Sources */,
+				EDFF67B71BD1139400E5C9EC /* STNetworkInterface+SessionDelegate.swift in Sources */,
 				ED076CC51BCAB0FE00B53396 /* Page+CoreDataProperties.swift in Sources */,
 				ED076CBC1BCAAFC200B53396 /* TestDataModel.xcdatamodeld in Sources */,
 				ED076CB91BCAA8C800B53396 /* SwifTrixPerformanceTests.swift in Sources */,
@@ -638,13 +674,13 @@
 				EDFF67B01BD1117D00E5C9EC /* STDatabase+ChangeManagement.swift in Sources */,
 				ED076CC81BCAB0FE00B53396 /* Bookworm.swift in Sources */,
 				ED076CC61BCAB0FE00B53396 /* Page.swift in Sources */,
-				EDFF67AB1BD1113D00E5C9EC /* STJSONInterface.swift in Sources */,
+				EDFF67AB1BD1113D00E5C9EC /* STNetworkInterface.swift in Sources */,
 				ED076CC71BCAB0FE00B53396 /* Bookworm+CoreDataProperties.swift in Sources */,
 				EDFF67CF1BD13CD400E5C9EC /* STKeychainCertificate.swift in Sources */,
 				ED076CC41BCAB0FE00B53396 /* Book.swift in Sources */,
 				EDFF67B21BD1117D00E5C9EC /* STDatabase+FetchRequests.swift in Sources */,
 				EDFF67C31BD1200100E5C9EC /* STKeychain+Items.swift in Sources */,
-				EDFF67C01BD117B000E5C9EC /* STKeychain+Errors.swift in Sources */,
+				EDFF67C01BD117B000E5C9EC /* STKeychainError.swift in Sources */,
 				EDFF67C91BD135B900E5C9EC /* STKeychainGenericPassword.swift in Sources */,
 				EDFF67BB1BD1168400E5C9EC /* STKeychain.swift in Sources */,
 				ED3D0FA31BCA580F00D5695E /* SwifTrixKeychainTests.swift in Sources */,
@@ -655,15 +691,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0050591BD4474D0043528B /* STJSONPackage.swift in Sources */,
+				ED0050621BD452B90043528B /* STJSONParser.swift in Sources */,
+				ED00505A1BD4474D0043528B /* STNetworkError.swift in Sources */,
+				ED00505B1BD4474D0043528B /* STJSONError.swift in Sources */,
 				ED59EE9E1BD27C1300A8857E /* STKeychain.swift in Sources */,
-				ED59EE9F1BD27C1300A8857E /* STKeychain+Errors.swift in Sources */,
+				ED59EE9F1BD27C1300A8857E /* STKeychainError.swift in Sources */,
 				ED59EEA01BD27C1300A8857E /* STKeychain+Items.swift in Sources */,
 				ED59EEA11BD27C1300A8857E /* STKeychainItem.swift in Sources */,
 				ED59EEA21BD27C1300A8857E /* STKeychainGenericPassword.swift in Sources */,
 				ED59EEA31BD27C1300A8857E /* STKeychainInternetPassword.swift in Sources */,
 				ED59EEA41BD27C1300A8857E /* STKeychainCertificate.swift in Sources */,
-				ED59EEA51BD27C1300A8857E /* STJSONInterface.swift in Sources */,
-				ED59EEA61BD27C1400A8857E /* STJSONInterface+SessionDelegate.swift in Sources */,
+				ED59EEA51BD27C1300A8857E /* STNetworkInterface.swift in Sources */,
+				ED59EEA61BD27C1400A8857E /* STNetworkInterface+SessionDelegate.swift in Sources */,
 				ED59EEA71BD27C1400A8857E /* STDatabase.swift in Sources */,
 				ED59EEA81BD27C1400A8857E /* STDatabase+ChangeManagement.swift in Sources */,
 				ED59EEA91BD27C1400A8857E /* STDatabase+FetchRequests.swift in Sources */,
@@ -683,16 +723,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0050561BD447440043528B /* STJSONPackage.swift in Sources */,
+				ED0050611BD452B90043528B /* STJSONParser.swift in Sources */,
+				ED0050571BD447440043528B /* STNetworkError.swift in Sources */,
+				ED0050581BD447440043528B /* STJSONError.swift in Sources */,
 				ED59EE811BD27AC400A8857E /* STDatabase+FetchRequests.swift in Sources */,
 				EDFF68151BD14C1500E5C9EC /* STKeychain.swift in Sources */,
-				EDFF68161BD14C1500E5C9EC /* STKeychain+Errors.swift in Sources */,
+				EDFF68161BD14C1500E5C9EC /* STKeychainError.swift in Sources */,
 				EDFF68171BD14C1500E5C9EC /* STKeychain+Items.swift in Sources */,
 				EDFF68181BD14C1500E5C9EC /* STKeychainItem.swift in Sources */,
 				EDFF68191BD14C1500E5C9EC /* STKeychainGenericPassword.swift in Sources */,
 				EDFF681A1BD14C1500E5C9EC /* STKeychainInternetPassword.swift in Sources */,
 				EDFF681B1BD14C1500E5C9EC /* STKeychainCertificate.swift in Sources */,
-				EDFF681C1BD14C1500E5C9EC /* STJSONInterface.swift in Sources */,
-				EDFF681D1BD14C1500E5C9EC /* STJSONInterface+SessionDelegate.swift in Sources */,
+				EDFF681C1BD14C1500E5C9EC /* STNetworkInterface.swift in Sources */,
+				EDFF681D1BD14C1500E5C9EC /* STNetworkInterface+SessionDelegate.swift in Sources */,
 				EDFF681E1BD14C1500E5C9EC /* STDatabase.swift in Sources */,
 				EDFF681F1BD14C1500E5C9EC /* STDatabase+ChangeManagement.swift in Sources */,
 				EDFF68211BD14C1500E5C9EC /* STDatabase+ObjectCreation.swift in Sources */,
@@ -1041,6 +1085,7 @@
 				ED59EE9A1BD27BF300A8857E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED59EE9B1BD27BF300A8857E /* Build configuration list for PBXNativeTarget "SwifTrixTVTests" */ = {
 			isa = XCConfigurationList;
@@ -1049,6 +1094,7 @@
 				ED59EE9D1BD27BF300A8857E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDFF680F1BD14BFA00E5C9EC /* Build configuration list for PBXNativeTarget "SwifTrixOSX" */ = {
 			isa = XCConfigurationList;

@@ -1,5 +1,5 @@
 //
-//  STKeychain+Errors.swift
+//  STJSONErrors.swift
 //  SwifTrix
 //
 // The MIT License (MIT)
@@ -25,45 +25,18 @@
 // THE SOFTWARE.
 
 import Foundation
-import Security
 
-public enum STKeychainError: ErrorType {
-    case NoError
-    case FunctionNotImplemented
-    case InvalidParameters
-    case MemoryAllocationFailure
-    case NoTrustResultsAvailable
-    case AuthenticationFailed
-    case ItemAlreadyExists
-    case ItemNotFound
-    case InteractionWithSecServerNotAllowed
-    case UnableToDecodeProvidedData
-    case UnknownError
+/**
+ STJSONError represents errors related to JSON objects
+ */
+public enum STJSONError: ErrorType {
+    /**
+     The object in question can not be parsed to a JSON object
+     */
+    case JSONObjectParsingNotPossible
     
-    static func fromOSStatus(status: OSStatus) -> STKeychainError? {
-        switch status {
-        case 0:
-            return nil
-        case -4:
-            return .FunctionNotImplemented
-        case -50:
-            return .InvalidParameters
-        case -108:
-            return .MemoryAllocationFailure
-        case -25291:
-            return .NoTrustResultsAvailable
-        case -25293:
-            return .AuthenticationFailed
-        case -25299:
-            return .ItemAlreadyExists
-        case -25300:
-            return .ItemNotFound
-        case -25308:
-            return .InteractionWithSecServerNotAllowed
-        case -26275:
-            return .UnableToDecodeProvidedData
-        default:
-            return .UnknownError
-        }
-    }
+    /**
+     Any error related to parsing JSON objects
+     */
+    case JSONObjectParsingError
 }

@@ -1,5 +1,5 @@
 //
-//  STDatabase+ChangeManagement.swift
+//  STNetworkError.swift
 //  SwifTrix
 //
 // The MIT License (MIT)
@@ -25,30 +25,19 @@
 // THE SOFTWARE.
 
 import Foundation
-import CoreData
 
-public extension STDatabase {
+/**
+ A network error represents any error related to network connections.
+ */
+public enum STNetworkError: ErrorType {
     
     /**
-     Function that saves the database state for both the asynchronous and main context.
+     A timeout while connecting to the server
      */
-    public func save() {
-        do {
-            // Save main context
-            try self.mainContext.save()
-            
-            // Save asynchronous context on its own queue
-            self.asyncContext.performBlock({
-                do {
-                    try self.asyncContext.save()
-                } catch let error as NSError {
-                    print("Error while saving asynchronous database:")
-                    print(error.localizedDescription)
-                }
-            })
-        } catch let error as NSError {
-            print("Error while saving database:")
-            print(error.localizedDescription)
-        }
-    }
+    case ConnectionTimeout
+    
+    /**
+     Server is unavailable
+     */
+    case ServerUnavailable
 }
