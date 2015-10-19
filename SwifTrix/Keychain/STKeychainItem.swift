@@ -65,8 +65,8 @@ public class STKeychainItem: NSObject {
     /**
      Returns the attribute for a certain key in the desired class type.
      
-     - parameter key: the key of the attribute in the keychain item's attributes
-     - returns: the value for the searched key in the desired type
+     - parameter key: The key of the attribute in the keychain item's attributes
+     - returns: The value for the searched key in the desired type
      */
     func attributeForKey<AttributeType>(key: CFStringRef) -> AttributeType? {
         return self.attributes[key as String] as? AttributeType
@@ -75,8 +75,8 @@ public class STKeychainItem: NSObject {
     /**
      Sets the specified attribute value for a given key
      
-     - parameter attribute: the attribute value that you want to save
-     - parameter key: the key for which the attribute should be saved
+     - parameter attribute: The attribute value that you want to save
+     - parameter key: The key for which the attribute should be saved
     */
     func setAttribute(attribute: AnyObject?, forKey key: CFStringRef) {
         if let attribute = attribute {
@@ -85,14 +85,16 @@ public class STKeychainItem: NSObject {
     }
     
     /**
-     Sets the specified search attribute value for a given key
+     Sets the specified search attribute value for a given key. If the attribute is nil, this pair is removed from the search attributes.
      
-     - parameter attribute: the attribute value that you want to save
-     - parameter key: the key for which the attribute should be saved
+     - parameter attribute: The attribute value that you want to save
+     - parameter key: The key for which the attribute should be saved
      */
     func setSearchAttribute(attribute: AnyObject?, forKey key: CFStringRef) {
         if let attribute = attribute {
             self.searchAttributes.updateValue(attribute, forKey: key as String)
+        } else {
+            self.searchAttributes.removeValueForKey(key as String)
         }
     }
 }

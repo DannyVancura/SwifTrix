@@ -31,8 +31,9 @@ public extension STKeychain {
     /**
      Adds the given keychain item's attributes to the keychain.
      
-     - parameter keychainItem: the keychain item whose attributes will be added to the keychain
-     - throws: an instance of STKeychainError if any error occurred
+     - precondition: The keychain item is assumed to not already exist in the keychain. Otherwise, this call will throw an `STKeychainError.ItemAlreadyExists` error.
+     - parameter keychainItem: The keychain item whose attributes will be added to the keychain
+     - throws: An instance of STKeychainError if any error occurred
      */
     public class func addKeychainItem(keychainItem: STKeychainItem) throws {
         try STKeychain.secureAdd(keychainItem.attributes)
@@ -41,8 +42,10 @@ public extension STKeychain {
     /**
      Deletes the keychain item that is found by using the item's search attributes from the keychain.
      
-     - parameter keychainItem: the keychain item that you are trying to delete from the keychain
-     - throws: an instance of STKeychainError if any error occurred
+     - precondition: The keychain item is assumed to exist in the keychain. Otherwise, this call will throw an `STKeychainError.ItemNotFound` error.
+     
+     - parameter keychainItem: The keychain item that you are trying to delete from the keychain
+     - throws: An instance of STKeychainError if any error occurred
      */
     public class func deleteKeychainItem(keychainItem: STKeychainItem) throws {
         try STKeychain.secureDelete(keychainItem.searchAttributes)
@@ -51,19 +54,30 @@ public extension STKeychain {
     /**
      Updates the keychain item that is found by the keychain item's search attributes with its current attributes.
      
-     - parameter keychainItem: the keychain item, whose search attributes are used to find itself in the database and whose attributes are used to update it
-     - throws: an instance of STKeychainError if any error occured
+     - precondition: The keychain item is assumed to exist in the keychain. Otherwise, this call will throw an `STKeychainError.ItemNotFound` error. Further, the updated keychain item should only contain the attributes that will be updated. Passing a keychain item with read-only properties (such as `kSecAttrCreationDate`) might fail, as the keychain will try to save these.
+     
+     - parameter keychainItem: The keychain item, whose search attributes are used to find itself in the database
+     - parameter updatedKeychainItem: The keychain item, whose attributes are used to update the existing values in the keychain
+     - throws: An instance of STKeychainError if any error occured
      */
-    public class func updateKeychainItem(keychainItem: STKeychainItem) throws {
-        try STKeychain.secureUpdate(keychainItem.attributes, query: keychainItem.searchAttributes)
+    public class func updateKeychainItem(keychainItem: STKeychainItem, withNewValuesFrom updatedKeychainItem: STKeychainItem) throws {
+        let keychainAttributes = keychainItem.searchAttributes
+        
+        // Remove the class from the attributes, since this is supposed to be set in an STKeychainItem, but can not be updated
+        var updatedAttributes = updatedKeychainItem.attributes
+        updatedAttributes.removeValueForKey(kSecClass as String)
+        
+        try STKeychain.secureUpdate(updatedAttributes, query: keychainAttributes)
     }
     
     /**
      Searches the keychain for the given keychain item's search attributes.
      
-     - parameter keychainItem: the keychain item, whose known search attributes are used to find the data you are looking for
-     - returns: the attributes of the searched keychain item that are stored in the keychain or nil, if the item could not be found or its data parsed
-     - throws: an instance of STKeychainError if any error occurred
+     - precondition: The keychain item is assumed to exist in the keychain. Otherwise, this call will throw an `STKeychainError.ItemNotFound` error.
+     
+     - parameter keychainItem: The keychain item, whose known search attributes are used to find the data you are looking for
+     - returns: The attributes of the searched keychain item that are stored in the keychain or nil, if the item could not be found or its data parsed
+     - throws: An instance of STKeychainError if any error occurred
      */
     public class func searchKeychainItem(keychainItem: STKeychainItem) throws -> Dictionary<String, AnyObject>? {
         var keychainAttributes = keychainItem.searchAttributes

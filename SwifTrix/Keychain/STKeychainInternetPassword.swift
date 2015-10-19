@@ -83,7 +83,7 @@ public class STKeychainInternetPassword: STKeychainItem {
     }
     
     /**
-     The corresponding value is of type CFNumberRef and represents the item's creator. This number is the unsigned integer representation of a four-character code (for example, 'aCrt').
+     The corresponding value is of type `CFNumberRef` and represents the item's creator. This number is the unsigned integer representation of a four-character code (for example, 'aCrt').
      */
     public var creator: UInt? {
         get { return self.attributeForKey(kSecAttrCreator)}
@@ -91,7 +91,7 @@ public class STKeychainInternetPassword: STKeychainItem {
     }
     
     /**
-     The corresponding value is of type CFNumberRef and represents the item's type. This number is the unsigned integer representation of a four-character code (for example, 'aTyp').
+     The corresponding value is of type `CFNumberRef` and represents the item's type. This number is the unsigned integer representation of a four-character code (for example, 'aTyp').
      */
     public var type: UInt? {
         get { return self.attributeForKey(kSecAttrType) }
@@ -101,7 +101,7 @@ public class STKeychainInternetPassword: STKeychainItem {
     /**
      The user-visible label for this item.
      
-     - if set, this is part of the search attributes
+     - postcondition: If set to a value other than `nil`, this is part of the search attributes
      */
     public var label: String? {
         get { return self.attributeForKey(kSecAttrLabel) }
@@ -130,7 +130,7 @@ public class STKeychainInternetPassword: STKeychainItem {
     /**
      Account name for this password
      
-     - if set, this is part of the search attributes
+     - postcondition: If set to a value other than `nil`, this is part of the search attributes
      */
     public var account: String? {
         get { return self.attributeForKey(kSecAttrAccount) }
@@ -151,7 +151,7 @@ public class STKeychainInternetPassword: STKeychainItem {
     /**
      Contains the server's domain name or IP address
      
-     - if set, this is part of the search attributes
+     - postcondition: If set to a value other than `nil`, this is part of the search attributes
     */
     public var server: String? {
         get { return self.attributeForKey(kSecAttrServer) }
@@ -175,7 +175,7 @@ public class STKeychainInternetPassword: STKeychainItem {
     /**
      Denotes the authentication scheme for this item. See: [Authentication Type Values](xcdoc://?url=developer.apple.com/library/prerelease/ios/documentation/Security/Reference/keychainservices/index.html#//apple_ref/doc/constant_group/Authentication_Type_Values)
      
-     - if set, this is part of the search attributes
+     - postcondition: If set to a value other than `nil`, this is part of the search attributes
     */
     public var authenticationType: UInt? {
         get { return self.attributeForKey(kSecAttrAuthenticationType) }
@@ -185,7 +185,7 @@ public class STKeychainInternetPassword: STKeychainItem {
     /**
      Represents an Internet port number.
      
-     - if set, this is part of the search attributes
+     - postcondition: If set to a value other than `nil`, this is part of the search attributes
     */
     public var port: UInt? {
         get { return self.attributeForKey(kSecAttrPort) }
@@ -198,7 +198,7 @@ public class STKeychainInternetPassword: STKeychainItem {
     /**
      Represents a path, typically the path component of the URL.
      
-     - if set, this is part of the search attributes
+     - postcondition: If set to a value other than `nil`, this is part of the search attributes
     */
     public var path: String? {
         get { return self.attributeForKey(kSecAttrPath) }

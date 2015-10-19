@@ -58,8 +58,8 @@ public class STDatabase: NSObject {
     /**
     Creates a new database with the given managed object model.
     
-    - parameter managedObjectModel: the managed object model that you want to use in this database
-    - parameter storeName: an optional argument that provides the file name for the persistent store. Defaults to "Main".<br/> **You have to provide this argument if you are handling multiple databases in different stores!**
+    - parameter managedObjectModel: The managed object model that you want to use in this database
+    - parameter storeName: An optional argument that provides the file name for the persistent store. Defaults to "Main".<br/> **You have to provide this argument if you are handling multiple databases in different stores!**
     */
     public init?(managedObjectModel: NSManagedObjectModel, persistentStoreName storeName: String = "Main") {
         self.model = managedObjectModel
@@ -89,8 +89,8 @@ public class STDatabase: NSObject {
     /**
      Creates a new database with the name of a given managed object model. The name does not have to include the implicit .momd extension of maanged object model files. Optionally, you can provide a bundle in which the managed object model file can be found. If no such argument is provided, it defaults to NSBundle.mainBundle() which is the default bundle of your application.
      
-     - parameter managedObjectModelName: the name of the managed object model file
-     - parameter bundle: an optional argument that indicates in which bundle the managed object model file can be found
+     - parameter managedObjectModelName: The name of the managed object model file
+     - parameter bundle: An optional argument that indicates in which bundle the managed object model file can be found
      */
     public convenience init?(var managedObjectModelName: String, inBundle bundle: NSBundle = NSBundle.mainBundle()) {
         // Append momd suffix for finding the managed object model file
@@ -116,7 +116,7 @@ public class STDatabase: NSObject {
     /**
     Creates a shared database that you can access throughout your application. Only one such database can exist at a time, so multiple calls of this method just override the previously created shared database. You call this method with a managed object model that you have created yourself.
     
-    - parameter managedObjectModel: the managed object model you want to use
+    - parameter managedObjectModel: The managed object model you want to use
     */
     public class func createSharedDatabase(managedObjectModel: NSManagedObjectModel) {
         _SharedDatabase = STDatabase(managedObjectModel: managedObjectModel)
@@ -125,8 +125,8 @@ public class STDatabase: NSObject {
     /**
      Creates a shared database that you can access throughout your application. Only one such database can exist at a time, so multiple calls of this method just override the previously created shared database. You call this method with a managed object model name, which is the name of a managed object model file in your application and optionally you can provide a bundle in which this file can be found. If no bundle is provided, it defaults to NSBundle.mainBundle, which is the default bundle of your application.
      
-     - parameter managedObjectModelName: the name of the managed object model file
-     - parameter bundle: an optional argument that indicates in which bundle the managed object model file can be found
+     - parameter managedObjectModelName: The name of the managed object model file
+     - parameter bundle: An optional argument that indicates in which bundle the managed object model file can be found
      */
     public class func createSharedDatabase(managedObjectModelName: String, inBundle bundle: NSBundle = NSBundle.mainBundle()) {
         _SharedDatabase = STDatabase(managedObjectModelName: managedObjectModelName, inBundle: bundle)
@@ -146,7 +146,7 @@ public class STDatabase: NSObject {
     /**
     Receives a ContextDidSaveNotification and merges the main context with the changes. This function is expected to be called by notifications of asyncContext, which handles the internal data representation asynchronously.
     
-    - parameter notification: context did save notification, sent by asyncContext
+    - parameter notification: An `NSManagedObjectContextDidSaveNotification` sent by asyncContext
     */
     func contextDidSave(notification: NSNotification) {
         self.mainContext.mergeChangesFromContextDidSaveNotification(notification)

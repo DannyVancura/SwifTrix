@@ -38,25 +38,41 @@ class SwifTrixTests: XCTestCase {
     }
     
     /**
+     Creates a prefilled `STKeychainInternetPassword` for testing purposes.
+     */
+    private func createInternetPassword() -> STKeychainInternetPassword {
+        let internetPassword = STKeychainInternetPassword()
+        internetPassword.label = "internetPassword"
+        internetPassword.server = "www.example.de"
+        internetPassword.data = NSString(string: "password").dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        internetPassword.path = "path/to/something/"
+        internetPassword.itemDescription = "A password for www.example.de"
+        internetPassword.account = "test@example.com"
+        
+        return internetPassword
+    }
+    
+    /**
+     If an item already exists in the keychain, this function deletes it (and all values that are stored with it) and creates it with the provided keychainItem (without the attributes that might have been set before)
+     */
+    private func addObjectToKeychain(keychainItem: STKeychainItem) throws {
+        do {
+            try STKeychain.deleteKeychainItem(keychainItem)
+            try STKeychain.addKeychainItem(keychainItem)
+        } catch STKeychainError.ItemNotFound {
+            try STKeychain.addKeychainItem(keychainItem)
+        }
+    }
+    
+    /**
      Tests saving and loading of a keychain item with an STKeychainInternetPassword as example
      */
     func testKeychainItemCreation() {
         do {
             // Prepare the test object
-            let internetPassword = STKeychainInternetPassword()
-            internetPassword.label = "internetPassword"
-            internetPassword.server = "www.example.de"
-            internetPassword.data = NSString(string: "password").dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-            internetPassword.path = "path/to/something/"
-            internetPassword.itemDescription = "A password for www.example.de"
-            internetPassword.account = "test@example.com"
+            let internetPassword = self.createInternetPassword()
             
-            // Save the test object and ignore the "Item already exists" error that might occur during successive tests
-            do {
-                try STKeychain.addKeychainItem(internetPassword)
-            } catch STKeychainError.ItemAlreadyExists {
-                
-            }
+            try self.addObjectToKeychain(internetPassword)
             
             // Search the saved item with the test object's searchAttributes (in this case: label, server, path, account)
             let dict = try STKeychain.searchKeychainItem(internetPassword)
@@ -82,6 +98,45 @@ class SwifTrixTests: XCTestCase {
         } catch {
             print(error)
             XCTFail("Unexpected error during test")
+        }
+    }
+    
+    func testKeychainItemUpdate() {
+        do {
+            // Create an internet password and a password that contains only changes to this first internet password
+            let internetPassword = self.createInternetPassword()
+            let updatedInternetPassword = STKeychainInternetPassword()
+            
+            // Set the changes on the empty internet password
+            updatedInternetPassword.data = NSString(string: "newPassword").dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+            updatedInternetPassword.port = 12345
+            
+            // Add the first internet password (without changes)
+            try self.addObjectToKeychain(internetPassword)
+            
+            // Update this saved internet password (so that it contains the changes)
+            try STKeychain.updateKeychainItem(internetPassword, withNewValuesFrom: updatedInternetPassword)
+            
+            // Fetch the saved values and check if they were updated correctly
+            guard let updatedValues = try STKeychain.searchKeychainItem(updatedInternetPassword) else {
+                XCTFail("Expected to find updated attributes for the updated internet password")
+                return
+            }
+            
+            XCTAssertTrue(updatedValues[kSecAttrPort as String] as? Int == 12345, "Expected the port to be updated to 12345, instead found \(updatedValues[kSecAttrPort as String])")
+            guard let data = updatedValues[kSecValueData as String] as? NSData else {
+                XCTFail("Expected the updated keychain item to contain data for the key kSecValueData")
+                return
+            }
+            guard let str = String(data: data, encoding: NSUTF8StringEncoding) else {
+                XCTFail("Expected the updated data to be parseable to a string")
+                return
+            }
+            
+            XCTAssertEqual(str, "newPassword")
+        } catch {
+            print(error)
+            XCTFail("Unexpected error")
         }
     }
     
@@ -122,6 +177,48 @@ class SwifTrixTests: XCTestCase {
                 XCTFail("Unexpected error: \(error)")
             }
         }
+    }
+    
+    /**
+     Keychain operations are expected to throw errors under certain circumstances, such as deleting non-existing items, adding items twice or searching for non-existing items. This test checks, if the right errors are thrown in these cases.
+     */
+    func testForExpectedErrors() {
+        let internetPassword = self.createInternetPassword()
         
+        // Add it twice and check if it correctly throws an ItemAlreadyExists error
+        do {
+            try self.addObjectToKeychain(internetPassword)
+            try STKeychain.addKeychainItem(internetPassword)
+            XCTFail("Expected Error while adding an item twice")
+        } catch STKeychainError.ItemAlreadyExists {
+            // O.K.
+        } catch {
+            XCTFail("Unexpected error")
+        }
+        
+        // Delete it twice and check if it correctly throws an ItemNotFound error the second time
+        do {
+            try STKeychain.deleteKeychainItem(internetPassword)
+        } catch {
+            XCTFail("Unexpected error while deleting")
+        }
+        do {
+            try STKeychain.deleteKeychainItem(internetPassword)
+            XCTFail("Expected Error while deleting non-existing item")
+        } catch STKeychainError.ItemNotFound {
+            // O.K.
+        } catch {
+            XCTFail("Unexpected error while deleting the second time")
+        }
+        
+        // Search for a non-existing item
+        do {
+            try STKeychain.searchKeychainItem(internetPassword)
+            XCTFail("Expected Error while searching for non-existing item")
+        } catch STKeychainError.ItemNotFound {
+            // O.K.
+        } catch {
+            XCTFail("Unexpected error while searching for a non-existing item")
+        }
     }
 }

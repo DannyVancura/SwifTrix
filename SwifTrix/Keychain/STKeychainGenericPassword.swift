@@ -101,7 +101,7 @@ public class STKeychainGenericPassword: STKeychainItem {
     /**
      The user-visible label for this item.
      
-     - if set, this is part of the search attributes
+     - postcondition: If set to a value other than `nil`, this is part of the search attributes
      */
     public var label: String? {
         get { return self.attributeForKey(kSecAttrLabel) }
@@ -130,7 +130,7 @@ public class STKeychainGenericPassword: STKeychainItem {
     /**
      Account name for this password
      
-     - if set, this is part of the search attributes
+     - postcondition: If set to a value other than `nil`, this is part of the search attributes
     */
     public var account: String? {
         get { return self.attributeForKey(kSecAttrAccount) }
@@ -143,7 +143,7 @@ public class STKeychainGenericPassword: STKeychainItem {
     /**
      Represents the service associated with this item.
      
-     - if set, this is part of the search attributes
+     - postcondition: If set to a value other than `nil`, this is part of the search attributes
     */
     public var service: String? {
         get { return self.attributeForKey(kSecAttrService) }

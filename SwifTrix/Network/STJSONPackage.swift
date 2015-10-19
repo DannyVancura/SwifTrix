@@ -33,10 +33,10 @@ public class STJSONPackage: NSObject {
     var attributes: Dictionary<String,AnyObject>
     
     /**
-     Initializes a JSON package with values for the respective keys, such as values = ["John"], keys = ["firstName"]
+     Initializes a JSON package with values for the respective keys, such as `values = ["John"]`, `keys = ["firstName"]`
      
-     - parameter values: an array with the values for an object
-     - parameter keys: an array with the corresponding keys for 'values'
+     - parameter values: An array with the values for an object
+     - parameter keys: An array with the corresponding keys for 'values'
      */
     public init(withValues values: [AnyObject], forKeys keys: [String]) {
         self.attributes = NSDictionary(objects: values, forKeys: keys) as! [String:AnyObject]
@@ -44,9 +44,9 @@ public class STJSONPackage: NSObject {
     }
     
     /**
-     Initializes a JSON package with values for the respective keys in a dictionary, such as ["firstName":"John"]
+     Initializes a JSON package with values for the respective keys in a dictionary, such as `["firstName":"John"]`
      
-     - parameter valuesForKeys: a dictionary with the object's information
+     - parameter valuesForKeys: A dictionary with the object's information
      */
     public init(valuesForKeys: [String:AnyObject]) {
         self.attributes = valuesForKeys
@@ -56,7 +56,7 @@ public class STJSONPackage: NSObject {
     /**
      Initializes a JSON package with data from a HTTP response, i.e. data that can be parsed as a NSDictionary.
      
-     - parameter data: data that can be parsed as a JSON object, for example data that was sent from a server as response for a GET request
+     - parameter data: Data that can be parsed as a JSON object, for example data that was sent from a server as response for a GET request
      */
     public convenience init(data: NSData) throws {
         // Check if data can be parsed to a JSON object

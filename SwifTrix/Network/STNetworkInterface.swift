@@ -100,6 +100,7 @@ public class STNetworkInterface: NSObject {
      
      Allows HTTP and HTTPS uploads or downloads to be performed in the background.
      */
+    @available(OSX 10.10, *)
     public var BackgroundNetworkInterface: STNetworkInterface {
         if backgroundNetworkInterface == nil {
             backgroundNetworkInterface = STNetworkInterface()

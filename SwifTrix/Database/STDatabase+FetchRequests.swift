@@ -53,7 +53,7 @@ import CoreData
 public extension STDatabase {
     /**
      This function fetches all objects with a certain type and returns it as an optional array.
-     - returns: an array of registered objects in the database. You have to specify the type implicitly by calling this method similarly to:
+     - returns: An array of registered objects in the database. You have to specify the type implicitly by calling this method similarly to:
      
      let array: [MyObject]? = database.fetchObjectsWithType("MyObject")
      */

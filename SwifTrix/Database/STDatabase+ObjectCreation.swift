@@ -30,11 +30,11 @@ import CoreData
 public extension STDatabase {
     /**
      Creates and returns an object with a given name and inserts it into the database. The return value is implicitly cast to the desired object type, if possible.
-     - parameter name: the entity name of the desired object in the database
+     - parameter name: The entity name of the desired object in the database
      
      Example:
      
-     let obj: MyManagedObject = STDatabase.SharedDatabase!.createObjectNamed("MyManagedObject")
+     `let obj: MyManagedObject = STDatabase.SharedDatabase!.createObjectNamed("MyManagedObject")`
      */
     public func createObjectNamed<ObjectType where ObjectType : NSManagedObject>(name: String) -> ObjectType? {
         var asyncObject: NSManagedObject?
@@ -49,7 +49,7 @@ public extension STDatabase {
     
     /**
      Deletes an object from the database
-     - parameter object: the managed object you want to delete
+     - parameter object: The managed object you want to delete
      */
     public func deleteObject(object : NSManagedObject) {
         if object.managedObjectContext === self.mainContext{

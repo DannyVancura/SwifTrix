@@ -53,15 +53,20 @@ public class STKeychainCertificate: STKeychainItem {
     }
     
     /**
-     Denotes the certificate type (see the CSSM_CERT_TYPE enumeration in cssmtype.h)
+     Denotes the certificate type (see the `CSSM_CERT_TYPE` enumeration in cssmtype.h)
+     
+     - postcondition: If set to a value other than `nil`, this is part of the search attributes
     */
     public var certificateType: UInt? {
         get { return self.attributeForKey(kSecAttrCertificateType) }
-        set { self.setAttribute(newValue, forKey: kSecAttrCertificateType) }
+        set {
+            self.setAttribute(newValue, forKey: kSecAttrCertificateType)
+            self.setSearchAttribute(newValue, forKey: kSecAttrCertificateType)
+        }
     }
     
     /**
-     Denotes the certificate encoding (see the CSSM_CERT_ENCODING enumeration in cssmtype.h).
+     Denotes the certificate encoding (see the `CSSM_CERT_ENCODING` enumeration in cssmtype.h).
     */
     public var certificateEncoding: UInt? {
         get { return self.attributeForKey(kSecAttrCertificateEncoding) }
@@ -71,7 +76,7 @@ public class STKeychainCertificate: STKeychainItem {
     /**
      The user-visible label for this item.
      
-     - if set, this is part of the search attributes
+     - postcondition: If set to a value other than `nil`, this is part of the search attributes
      */
     public var label: String? {
         get { return self.attributeForKey(kSecAttrLabel) }
@@ -82,35 +87,35 @@ public class STKeychainCertificate: STKeychainItem {
     }
     
     /**
-     The corresponding value is of type CFDataRef and contains the X.500 subject name of a certificate. Items of class kSecClassCertificate have this attribute. Read only.
+     The corresponding value is of type CFDataRef and contains the X.500 subject name of a certificate. Items of class `kSecClassCertificate` have this attribute. Read only.
     */
     public var subject: NSData? {
         get { return self.attributeForKey(kSecAttrSubject) }
     }
     
     /**
-     The corresponding value is of type CFDataRef and contains the X.500 issuer name of a certificate. Items of class kSecClassCertificate have this attribute. Read only.
+     The corresponding value is of type CFDataRef and contains the X.500 issuer name of a certificate. Items of class `kSecClassCertificate` have this attribute. Read only.
     */
     public var issuer: NSData? {
         get { return self.attributeForKey(kSecAttrIssuer) }
     }
     
     /**
-     The corresponding value is of type CFDataRef and contains the serial number data of a certificate. Items of class kSecClassCertificate have this attribute. Read only.
+     The corresponding value is of type CFDataRef and contains the serial number data of a certificate. Items of class `kSecClassCertificate` have this attribute. Read only.
     */
     public var serialNumber: NSData? {
         get { return self.attributeForKey(kSecAttrSerialNumber) }
     }
     
     /**
-     The corresponding value is of type CFDataRef and contains the subject key ID of a certificate. Items of class kSecClassCertificate have this attribute. Read only.
+     The corresponding value is of type CFDataRef and contains the subject key ID of a certificate. Items of class `kSecClassCertificate` have this attribute. Read only.
     */
     public var subjectKeyID: NSData? {
         get { return self.attributeForKey(kSecAttrSubjectKeyID) }
     }
     
     /**
-     The corresponding value is of type CFDataRef and contains the hash of a certificate's public key. Items of class kSecClassCertificate have this attribute. Read only.
+     The corresponding value is of type CFDataRef and contains the hash of a certificate's public key. Items of class `kSecClassCertificate` have this attribute. Read only.
     */
     public var publicKeyHash: NSData? {
         get { return self.attributeForKey(kSecAttrPublicKeyHash) }
