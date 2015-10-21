@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9058" systemVersion="15B38b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9058"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="STFormFillController" customModule="SwifTrix" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="ARU-Gj-hzv" id="hZC-Gy-TZz"/>
+                <outlet property="saveButton" destination="n5A-VB-M1d" id="UFw-mA-sDK"/>
+                <outlet property="tableView" destination="JL5-8x-oWq" id="VKQ-uC-09n"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="541" height="358"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL5-8x-oWq" customClass="UITableView" customModule="SwifTrix" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="541" height="358"/>
+                    <clipView key="contentView" id="lQh-M0-fFu">
+                        <rect key="frame" x="1" y="1" width="539" height="356"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" id="2k6-rB-sva">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="19"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <animations/>
+                                <size key="intercellSpacing" width="3" height="2"/>
+                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </clipView>
+                    <animations/>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="drc-6u-Zuw">
+                        <rect key="frame" x="1" y="341" width="539" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="wk2-bn-7lD">
+                        <rect key="frame" x="224" y="17" width="15" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </scroller>
+                </scrollView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ARU-Gj-hzv" customClass="UIBarButtonItem">
+                    <rect key="frame" x="-6" y="-7" width="92" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="AAJ-x9-58p"/>
+                    </constraints>
+                    <animations/>
+                    <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ctg-bN-OV1">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                    </buttonCell>
+                    <connections>
+                        <action selector="cancelAction:" target="-2" id="7ek-QF-fWi"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n5A-VB-M1d" customClass="UIBarButtonItem">
+                    <rect key="frame" x="455" y="-7" width="92" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Jca-qI-ZyI"/>
+                    </constraints>
+                    <animations/>
+                    <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JxI-CW-YTO">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="saveAction:" target="-2" id="aYO-xK-C8O"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ARU-Gj-hzv" secondAttribute="bottom" id="MG6-op-qxr"/>
+                <constraint firstItem="JL5-8x-oWq" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="UYB-hH-f4l"/>
+                <constraint firstAttribute="trailing" secondItem="JL5-8x-oWq" secondAttribute="trailing" id="XGH-k8-UAx"/>
+                <constraint firstItem="JL5-8x-oWq" firstAttribute="leading" secondItem="ARU-Gj-hzv" secondAttribute="leading" id="cnF-lb-8GD"/>
+                <constraint firstItem="n5A-VB-M1d" firstAttribute="baseline" secondItem="ARU-Gj-hzv" secondAttribute="baseline" id="euK-w9-MOr"/>
+                <constraint firstItem="JL5-8x-oWq" firstAttribute="bottom" secondItem="ARU-Gj-hzv" secondAttribute="bottom" id="fWT-Rx-eqU"/>
+                <constraint firstItem="JL5-8x-oWq" firstAttribute="trailing" secondItem="n5A-VB-M1d" secondAttribute="trailing" id="gCd-dI-2Yq"/>
+                <constraint firstItem="ARU-Gj-hzv" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="wCB-QU-Vbd"/>
+            </constraints>
+            <animations/>
+            <connections>
+                <outlet property="cancelButton" destination="ARU-Gj-hzv" id="e2V-bn-rNj"/>
+                <outlet property="saveButton" destination="n5A-VB-M1d" id="pbN-LZ-oYh"/>
+                <outlet property="tableView" destination="JL5-8x-oWq" id="6Ca-gs-scp"/>
+            </connections>
+            <point key="canvasLocation" x="355.5" y="396"/>
+        </customView>
+    </objects>
+</document>

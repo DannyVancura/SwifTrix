@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9058" systemVersion="15B38b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9058"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <tableCellView id="yeX-7e-kri" customClass="STFormFillCell" customModule="SwifTrix" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="502" height="57"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hT2-3X-IkN" customClass="UILabel" customModule="SwifTrix" customModuleProvider="target">
+                    <rect key="frame" x="1" y="37" width="500" height="17"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="PVc-hN-PGf">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UFg-fL-ccm" customClass="UITextField" customModule="SwifTrix" customModuleProvider="target">
+                    <rect key="frame" x="167" y="7" width="332" height="22"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="mO8-7c-CPx">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8L8-gC-7Ep" customClass="UILabel" customModule="SwifTrix" customModuleProvider="target">
+                    <rect key="frame" x="1" y="10" width="160" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="156" id="SRP-oV-RfY"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="3HC-re-pFq">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="hT2-3X-IkN" firstAttribute="trailing" secondItem="UFg-fL-ccm" secondAttribute="trailing" id="1WC-Gh-RuV"/>
+                <constraint firstItem="hT2-3X-IkN" firstAttribute="top" secondItem="yeX-7e-kri" secondAttribute="top" constant="3" id="6r9-AK-o1G"/>
+                <constraint firstItem="UFg-fL-ccm" firstAttribute="top" secondItem="hT2-3X-IkN" secondAttribute="bottom" constant="8" symbolic="YES" id="9yJ-nn-xlV"/>
+                <constraint firstItem="UFg-fL-ccm" firstAttribute="baseline" secondItem="8L8-gC-7Ep" secondAttribute="baseline" id="Ddf-cY-WY9"/>
+                <constraint firstAttribute="trailing" secondItem="hT2-3X-IkN" secondAttribute="trailing" constant="3" id="jdS-zA-mfD"/>
+                <constraint firstItem="hT2-3X-IkN" firstAttribute="leading" secondItem="yeX-7e-kri" secondAttribute="leading" constant="3" id="l80-PW-Lqv"/>
+                <constraint firstItem="hT2-3X-IkN" firstAttribute="leading" secondItem="8L8-gC-7Ep" secondAttribute="leading" id="nRO-SK-pd8"/>
+                <constraint firstItem="UFg-fL-ccm" firstAttribute="leading" secondItem="8L8-gC-7Ep" secondAttribute="trailing" constant="8" symbolic="YES" id="rZR-YN-51Y"/>
+            </constraints>
+            <animations/>
+            <connections>
+                <outlet property="label" destination="8L8-gC-7Ep" id="sM0-u9-Z4O"/>
+                <outlet property="textField" destination="UFg-fL-ccm" id="Zim-ph-5qC"/>
+                <outlet property="warningLabel" destination="hT2-3X-IkN" id="dwt-D6-Tq6"/>
+            </connections>
+            <point key="canvasLocation" x="316" y="220.5"/>
+        </tableCellView>
+    </objects>
+</document>

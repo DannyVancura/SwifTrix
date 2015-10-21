@@ -1,0 +1,691 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED2CAA711BD6E9EB00472C3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA701BD6E9EB00472C3B /* AppDelegate.swift */; };
+		ED2CAA731BD6E9EB00472C3B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA721BD6E9EB00472C3B /* FirstViewController.swift */; };
+		ED2CAA751BD6E9EB00472C3B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA741BD6E9EB00472C3B /* SecondViewController.swift */; };
+		ED2CAA781BD6E9EB00472C3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2CAA761BD6E9EB00472C3B /* Main.storyboard */; };
+		ED2CAA7A1BD6E9EB00472C3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2CAA791BD6E9EB00472C3B /* Assets.xcassets */; };
+		ED2CAA7D1BD6E9EB00472C3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2CAA7B1BD6E9EB00472C3B /* LaunchScreen.storyboard */; };
+		ED2CAA881BD6E9EB00472C3B /* FormFillingDatabaseExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA871BD6E9EB00472C3B /* FormFillingDatabaseExampleTests.swift */; };
+		ED2CAA931BD6E9EB00472C3B /* FormFillingDatabaseExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA921BD6E9EB00472C3B /* FormFillingDatabaseExampleUITests.swift */; };
+		ED2CAABC1BD6EACE00472C3B /* SwifTrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2CAAAA1BD6EA8900472C3B /* SwifTrix.framework */; };
+		ED2CAABD1BD6EACE00472C3B /* SwifTrix.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED2CAAAA1BD6EA8900472C3B /* SwifTrix.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED2CAACD1BD70E0C00472C3B /* FormFilling.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAACB1BD70E0C00472C3B /* FormFilling.xcdatamodeld */; };
+		ED2CAAD01BD70E7B00472C3B /* FormFilling+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAACE1BD70E7B00472C3B /* FormFilling+CoreDataProperties.swift */; };
+		ED2CAAD11BD70E7B00472C3B /* FormFilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAACF1BD70E7B00472C3B /* FormFilling.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED2CAA841BD6E9EB00472C3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2CAA651BD6E9EB00472C3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED2CAA6C1BD6E9EB00472C3B;
+			remoteInfo = FormFillingDatabaseExample;
+		};
+		ED2CAA8F1BD6E9EB00472C3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2CAA651BD6E9EB00472C3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED2CAA6C1BD6E9EB00472C3B;
+			remoteInfo = FormFillingDatabaseExample;
+		};
+		ED2CAAA91BD6EA8900472C3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2CAAA01BD6EA8900472C3B /* SwifTrix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED3D0F931BCA580F00D5695E;
+			remoteInfo = SwifTrix;
+		};
+		ED2CAAAB1BD6EA8900472C3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2CAAA01BD6EA8900472C3B /* SwifTrix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED3D0F9D1BCA580F00D5695E;
+			remoteInfo = SwifTrixTests;
+		};
+		ED2CAAAD1BD6EA8900472C3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2CAAA01BD6EA8900472C3B /* SwifTrix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EDFF67FE1BD14BF900E5C9EC;
+			remoteInfo = SwifTrixOSX;
+		};
+		ED2CAAAF1BD6EA8900472C3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2CAAA01BD6EA8900472C3B /* SwifTrix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EDFF68071BD14BFA00E5C9EC;
+			remoteInfo = SwifTrixOSXTests;
+		};
+		ED2CAAB11BD6EA8900472C3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2CAAA01BD6EA8900472C3B /* SwifTrix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED59EE871BD27BF300A8857E;
+			remoteInfo = SwifTrixTV;
+		};
+		ED2CAAB31BD6EA8900472C3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2CAAA01BD6EA8900472C3B /* SwifTrix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED59EE901BD27BF300A8857E;
+			remoteInfo = SwifTrixTVTests;
+		};
+		ED2CAABE1BD6EACE00472C3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2CAAA01BD6EA8900472C3B /* SwifTrix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = ED3D0F921BCA580F00D5695E;
+			remoteInfo = SwifTrix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ED2CAAC01BD6EACE00472C3B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ED2CAABD1BD6EACE00472C3B /* SwifTrix.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ED2CAA6D1BD6E9EB00472C3B /* FormFillingDatabaseExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormFillingDatabaseExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2CAA701BD6E9EB00472C3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED2CAA721BD6E9EB00472C3B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		ED2CAA741BD6E9EB00472C3B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		ED2CAA771BD6E9EB00472C3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED2CAA791BD6E9EB00472C3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED2CAA7C1BD6E9EB00472C3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED2CAA7E1BD6E9EB00472C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED2CAA831BD6E9EB00472C3B /* FormFillingDatabaseExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormFillingDatabaseExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2CAA871BD6E9EB00472C3B /* FormFillingDatabaseExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFillingDatabaseExampleTests.swift; sourceTree = "<group>"; };
+		ED2CAA891BD6E9EB00472C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED2CAA8E1BD6E9EB00472C3B /* FormFillingDatabaseExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormFillingDatabaseExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2CAA921BD6E9EB00472C3B /* FormFillingDatabaseExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFillingDatabaseExampleUITests.swift; sourceTree = "<group>"; };
+		ED2CAA941BD6E9EB00472C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED2CAAA01BD6EA8900472C3B /* SwifTrix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwifTrix.xcodeproj; path = ../../../SwifTrix.xcodeproj; sourceTree = "<group>"; };
+		ED2CAACC1BD70E0C00472C3B /* FormFilling.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FormFilling.xcdatamodel; sourceTree = "<group>"; };
+		ED2CAACE1BD70E7B00472C3B /* FormFilling+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FormFilling+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ED2CAACF1BD70E7B00472C3B /* FormFilling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormFilling.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED2CAA6A1BD6E9EB00472C3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2CAABC1BD6EACE00472C3B /* SwifTrix.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2CAA801BD6E9EB00472C3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2CAA8B1BD6E9EB00472C3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED2CAA641BD6E9EB00472C3B = {
+			isa = PBXGroup;
+			children = (
+				ED2CAAA01BD6EA8900472C3B /* SwifTrix.xcodeproj */,
+				ED2CAA6F1BD6E9EB00472C3B /* FormFillingDatabaseExample */,
+				ED2CAA861BD6E9EB00472C3B /* FormFillingDatabaseExampleTests */,
+				ED2CAA911BD6E9EB00472C3B /* FormFillingDatabaseExampleUITests */,
+				ED2CAA6E1BD6E9EB00472C3B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED2CAA6E1BD6E9EB00472C3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CAA6D1BD6E9EB00472C3B /* FormFillingDatabaseExample.app */,
+				ED2CAA831BD6E9EB00472C3B /* FormFillingDatabaseExampleTests.xctest */,
+				ED2CAA8E1BD6E9EB00472C3B /* FormFillingDatabaseExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED2CAA6F1BD6E9EB00472C3B /* FormFillingDatabaseExample */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CAAC51BD70DEE00472C3B /* Core Data database */,
+				ED2CAA701BD6E9EB00472C3B /* AppDelegate.swift */,
+				ED2CAA721BD6E9EB00472C3B /* FirstViewController.swift */,
+				ED2CAA741BD6E9EB00472C3B /* SecondViewController.swift */,
+				ED2CAA761BD6E9EB00472C3B /* Main.storyboard */,
+				ED2CAA791BD6E9EB00472C3B /* Assets.xcassets */,
+				ED2CAA7B1BD6E9EB00472C3B /* LaunchScreen.storyboard */,
+				ED2CAA7E1BD6E9EB00472C3B /* Info.plist */,
+			);
+			path = FormFillingDatabaseExample;
+			sourceTree = "<group>";
+		};
+		ED2CAA861BD6E9EB00472C3B /* FormFillingDatabaseExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CAA871BD6E9EB00472C3B /* FormFillingDatabaseExampleTests.swift */,
+				ED2CAA891BD6E9EB00472C3B /* Info.plist */,
+			);
+			path = FormFillingDatabaseExampleTests;
+			sourceTree = "<group>";
+		};
+		ED2CAA911BD6E9EB00472C3B /* FormFillingDatabaseExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CAA921BD6E9EB00472C3B /* FormFillingDatabaseExampleUITests.swift */,
+				ED2CAA941BD6E9EB00472C3B /* Info.plist */,
+			);
+			path = FormFillingDatabaseExampleUITests;
+			sourceTree = "<group>";
+		};
+		ED2CAAA11BD6EA8900472C3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CAAAA1BD6EA8900472C3B /* SwifTrix.framework */,
+				ED2CAAAC1BD6EA8900472C3B /* SwifTrixTests.xctest */,
+				ED2CAAAE1BD6EA8900472C3B /* SwifTrix.framework */,
+				ED2CAAB01BD6EA8900472C3B /* SwifTrixOSXTests.xctest */,
+				ED2CAAB21BD6EA8900472C3B /* SwifTrix.framework */,
+				ED2CAAB41BD6EA8900472C3B /* SwifTrixTVTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED2CAAC51BD70DEE00472C3B /* Core Data database */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CAACE1BD70E7B00472C3B /* FormFilling+CoreDataProperties.swift */,
+				ED2CAACF1BD70E7B00472C3B /* FormFilling.swift */,
+				ED2CAACB1BD70E0C00472C3B /* FormFilling.xcdatamodeld */,
+			);
+			name = "Core Data database";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED2CAA6C1BD6E9EB00472C3B /* FormFillingDatabaseExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED2CAA971BD6E9EB00472C3B /* Build configuration list for PBXNativeTarget "FormFillingDatabaseExample" */;
+			buildPhases = (
+				ED2CAA691BD6E9EB00472C3B /* Sources */,
+				ED2CAA6A1BD6E9EB00472C3B /* Frameworks */,
+				ED2CAA6B1BD6E9EB00472C3B /* Resources */,
+				ED2CAAC01BD6EACE00472C3B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED2CAABF1BD6EACE00472C3B /* PBXTargetDependency */,
+			);
+			name = FormFillingDatabaseExample;
+			productName = FormFillingDatabaseExample;
+			productReference = ED2CAA6D1BD6E9EB00472C3B /* FormFillingDatabaseExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED2CAA821BD6E9EB00472C3B /* FormFillingDatabaseExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED2CAA9A1BD6E9EB00472C3B /* Build configuration list for PBXNativeTarget "FormFillingDatabaseExampleTests" */;
+			buildPhases = (
+				ED2CAA7F1BD6E9EB00472C3B /* Sources */,
+				ED2CAA801BD6E9EB00472C3B /* Frameworks */,
+				ED2CAA811BD6E9EB00472C3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED2CAA851BD6E9EB00472C3B /* PBXTargetDependency */,
+			);
+			name = FormFillingDatabaseExampleTests;
+			productName = FormFillingDatabaseExampleTests;
+			productReference = ED2CAA831BD6E9EB00472C3B /* FormFillingDatabaseExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED2CAA8D1BD6E9EB00472C3B /* FormFillingDatabaseExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED2CAA9D1BD6E9EB00472C3B /* Build configuration list for PBXNativeTarget "FormFillingDatabaseExampleUITests" */;
+			buildPhases = (
+				ED2CAA8A1BD6E9EB00472C3B /* Sources */,
+				ED2CAA8B1BD6E9EB00472C3B /* Frameworks */,
+				ED2CAA8C1BD6E9EB00472C3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED2CAA901BD6E9EB00472C3B /* PBXTargetDependency */,
+			);
+			name = FormFillingDatabaseExampleUITests;
+			productName = FormFillingDatabaseExampleUITests;
+			productReference = ED2CAA8E1BD6E9EB00472C3B /* FormFillingDatabaseExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED2CAA651BD6E9EB00472C3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Daniel Vancura";
+				TargetAttributes = {
+					ED2CAA6C1BD6E9EB00472C3B = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4VVXA4NYT9;
+					};
+					ED2CAA821BD6E9EB00472C3B = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4VVXA4NYT9;
+						TestTargetID = ED2CAA6C1BD6E9EB00472C3B;
+					};
+					ED2CAA8D1BD6E9EB00472C3B = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4VVXA4NYT9;
+						TestTargetID = ED2CAA6C1BD6E9EB00472C3B;
+					};
+				};
+			};
+			buildConfigurationList = ED2CAA681BD6E9EB00472C3B /* Build configuration list for PBXProject "FormFillingDatabaseExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED2CAA641BD6E9EB00472C3B;
+			productRefGroup = ED2CAA6E1BD6E9EB00472C3B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = ED2CAAA11BD6EA8900472C3B /* Products */;
+					ProjectRef = ED2CAAA01BD6EA8900472C3B /* SwifTrix.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				ED2CAA6C1BD6E9EB00472C3B /* FormFillingDatabaseExample */,
+				ED2CAA821BD6E9EB00472C3B /* FormFillingDatabaseExampleTests */,
+				ED2CAA8D1BD6E9EB00472C3B /* FormFillingDatabaseExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		ED2CAAAA1BD6EA8900472C3B /* SwifTrix.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifTrix.framework;
+			remoteRef = ED2CAAA91BD6EA8900472C3B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED2CAAAC1BD6EA8900472C3B /* SwifTrixTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwifTrixTests.xctest;
+			remoteRef = ED2CAAAB1BD6EA8900472C3B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED2CAAAE1BD6EA8900472C3B /* SwifTrix.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifTrix.framework;
+			remoteRef = ED2CAAAD1BD6EA8900472C3B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED2CAAB01BD6EA8900472C3B /* SwifTrixOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwifTrixOSXTests.xctest;
+			remoteRef = ED2CAAAF1BD6EA8900472C3B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED2CAAB21BD6EA8900472C3B /* SwifTrix.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifTrix.framework;
+			remoteRef = ED2CAAB11BD6EA8900472C3B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED2CAAB41BD6EA8900472C3B /* SwifTrixTVTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwifTrixTVTests.xctest;
+			remoteRef = ED2CAAB31BD6EA8900472C3B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED2CAA6B1BD6E9EB00472C3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2CAA7D1BD6E9EB00472C3B /* LaunchScreen.storyboard in Resources */,
+				ED2CAA7A1BD6E9EB00472C3B /* Assets.xcassets in Resources */,
+				ED2CAA781BD6E9EB00472C3B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2CAA811BD6E9EB00472C3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2CAA8C1BD6E9EB00472C3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED2CAA691BD6E9EB00472C3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2CAA751BD6E9EB00472C3B /* SecondViewController.swift in Sources */,
+				ED2CAACD1BD70E0C00472C3B /* FormFilling.xcdatamodeld in Sources */,
+				ED2CAA711BD6E9EB00472C3B /* AppDelegate.swift in Sources */,
+				ED2CAA731BD6E9EB00472C3B /* FirstViewController.swift in Sources */,
+				ED2CAAD01BD70E7B00472C3B /* FormFilling+CoreDataProperties.swift in Sources */,
+				ED2CAAD11BD70E7B00472C3B /* FormFilling.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2CAA7F1BD6E9EB00472C3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2CAA881BD6E9EB00472C3B /* FormFillingDatabaseExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2CAA8A1BD6E9EB00472C3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2CAA931BD6E9EB00472C3B /* FormFillingDatabaseExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED2CAA851BD6E9EB00472C3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED2CAA6C1BD6E9EB00472C3B /* FormFillingDatabaseExample */;
+			targetProxy = ED2CAA841BD6E9EB00472C3B /* PBXContainerItemProxy */;
+		};
+		ED2CAA901BD6E9EB00472C3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED2CAA6C1BD6E9EB00472C3B /* FormFillingDatabaseExample */;
+			targetProxy = ED2CAA8F1BD6E9EB00472C3B /* PBXContainerItemProxy */;
+		};
+		ED2CAABF1BD6EACE00472C3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwifTrix;
+			targetProxy = ED2CAABE1BD6EACE00472C3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED2CAA761BD6E9EB00472C3B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED2CAA771BD6E9EB00472C3B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED2CAA7B1BD6E9EB00472C3B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED2CAA7C1BD6E9EB00472C3B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED2CAA951BD6E9EB00472C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED2CAA961BD6E9EB00472C3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED2CAA981BD6E9EB00472C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = FormFillingDatabaseExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vancura.FormFillingDatabaseExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED2CAA991BD6E9EB00472C3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = FormFillingDatabaseExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vancura.FormFillingDatabaseExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ED2CAA9B1BD6E9EB00472C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FormFillingDatabaseExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vancura.FormFillingDatabaseExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormFillingDatabaseExample.app/FormFillingDatabaseExample";
+			};
+			name = Debug;
+		};
+		ED2CAA9C1BD6E9EB00472C3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FormFillingDatabaseExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vancura.FormFillingDatabaseExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormFillingDatabaseExample.app/FormFillingDatabaseExample";
+			};
+			name = Release;
+		};
+		ED2CAA9E1BD6E9EB00472C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FormFillingDatabaseExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vancura.FormFillingDatabaseExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FormFillingDatabaseExample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		ED2CAA9F1BD6E9EB00472C3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FormFillingDatabaseExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vancura.FormFillingDatabaseExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FormFillingDatabaseExample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED2CAA681BD6E9EB00472C3B /* Build configuration list for PBXProject "FormFillingDatabaseExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2CAA951BD6E9EB00472C3B /* Debug */,
+				ED2CAA961BD6E9EB00472C3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED2CAA971BD6E9EB00472C3B /* Build configuration list for PBXNativeTarget "FormFillingDatabaseExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2CAA981BD6E9EB00472C3B /* Debug */,
+				ED2CAA991BD6E9EB00472C3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED2CAA9A1BD6E9EB00472C3B /* Build configuration list for PBXNativeTarget "FormFillingDatabaseExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2CAA9B1BD6E9EB00472C3B /* Debug */,
+				ED2CAA9C1BD6E9EB00472C3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED2CAA9D1BD6E9EB00472C3B /* Build configuration list for PBXNativeTarget "FormFillingDatabaseExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2CAA9E1BD6E9EB00472C3B /* Debug */,
+				ED2CAA9F1BD6E9EB00472C3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ED2CAACB1BD70E0C00472C3B /* FormFilling.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ED2CAACC1BD70E0C00472C3B /* FormFilling.xcdatamodel */,
+			);
+			currentVersion = ED2CAACC1BD70E0C00472C3B /* FormFilling.xcdatamodel */;
+			path = FormFilling.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ED2CAA651BD6E9EB00472C3B /* Project object */;
+}

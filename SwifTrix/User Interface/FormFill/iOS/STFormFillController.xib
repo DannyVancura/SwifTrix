@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9058" systemVersion="15B38b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9048"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STFormFillController" customModule="SwifTrix" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="7bN-gr-L0Z" id="b4l-Nt-iod"/>
+                <outlet property="saveButton" destination="8tW-TJ-5Tq" id="1jJ-l6-58J"/>
+                <outlet property="tableView" destination="L3s-dD-RxY" id="3Rg-t7-sA3"/>
+                <outlet property="view" destination="TXX-h1-3fo" id="ipE-mB-Jyv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="TXX-h1-3fo">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L3s-dD-RxY">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Tlp-VU-nUo"/>
+                        <outlet property="delegate" destination="-1" id="1Wi-Oe-JHd"/>
+                    </connections>
+                </tableView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMt-Ht-HhX">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <animations/>
+                    <items>
+                        <barButtonItem systemItem="cancel" id="7bN-gr-L0Z">
+                            <connections>
+                                <action selector="cancelAction:" destination="-1" id="oi9-rc-wGr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="tzd-UV-vjC"/>
+                        <barButtonItem style="done" systemItem="save" id="8tW-TJ-5Tq">
+                            <connections>
+                                <action selector="saveAction:" destination="-1" id="tkW-q5-G3W"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="L3s-dD-RxY" firstAttribute="top" secondItem="TXX-h1-3fo" secondAttribute="top" id="Gde-0q-dNS"/>
+                <constraint firstItem="L3s-dD-RxY" firstAttribute="leading" secondItem="WMt-Ht-HhX" secondAttribute="leading" id="IKr-tX-fc5"/>
+                <constraint firstItem="WMt-Ht-HhX" firstAttribute="trailing" secondItem="L3s-dD-RxY" secondAttribute="trailing" id="Jrf-Ry-mth"/>
+                <constraint firstAttribute="trailing" secondItem="WMt-Ht-HhX" secondAttribute="trailing" id="eQp-Eo-w2G"/>
+                <constraint firstItem="WMt-Ht-HhX" firstAttribute="leading" secondItem="TXX-h1-3fo" secondAttribute="leading" id="hmt-1U-4VO"/>
+                <constraint firstItem="L3s-dD-RxY" firstAttribute="bottom" secondItem="WMt-Ht-HhX" secondAttribute="bottom" id="o6G-RM-CbU"/>
+                <constraint firstAttribute="bottom" secondItem="L3s-dD-RxY" secondAttribute="bottom" id="tgJ-4k-X3U"/>
+            </constraints>
+            <point key="canvasLocation" x="329" y="227"/>
+        </view>
+    </objects>
+</document>

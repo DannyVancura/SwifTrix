@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="9058" systemVersion="15B38b" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9048"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="132" id="Shf-ih-tjm" customClass="STFormFillCell" customModule="SwifTrix" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="132"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Shf-ih-tjm" id="dZf-vc-bR3">
+                <rect key="frame" x="0.0" y="0.0" width="1904" height="132"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1iv-am-dax">
+                        <rect key="frame" x="8" y="8" width="1896" height="32"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HdW-JK-I1t">
+                        <rect key="frame" x="687" y="48" width="1209" height="66"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zng-i9-8If">
+                        <rect key="frame" x="8" y="48" width="671" height="66"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="671" id="uVl-S1-BJL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="HdW-JK-I1t" firstAttribute="leading" secondItem="zng-i9-8If" secondAttribute="trailing" constant="8" symbolic="YES" id="2Zg-XT-iuB"/>
+                    <constraint firstItem="zng-i9-8If" firstAttribute="leading" secondItem="dZf-vc-bR3" secondAttribute="leadingMargin" id="3u5-Bk-bLM"/>
+                    <constraint firstItem="1iv-am-dax" firstAttribute="top" secondItem="dZf-vc-bR3" secondAttribute="topMargin" id="5Nq-lT-Dby"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="1iv-am-dax" secondAttribute="trailing" constant="8" id="8cn-jK-OKo"/>
+                    <constraint firstItem="zng-i9-8If" firstAttribute="bottom" secondItem="HdW-JK-I1t" secondAttribute="bottom" id="CVR-93-pE7"/>
+                    <constraint firstItem="1iv-am-dax" firstAttribute="leading" secondItem="zng-i9-8If" secondAttribute="leading" id="Hjh-Qu-EfY"/>
+                    <constraint firstItem="zng-i9-8If" firstAttribute="top" secondItem="1iv-am-dax" secondAttribute="bottom" constant="8" symbolic="YES" id="Qvt-nA-LEC"/>
+                    <constraint firstItem="HdW-JK-I1t" firstAttribute="top" secondItem="zng-i9-8If" secondAttribute="top" id="ZBB-IU-WJd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="HdW-JK-I1t" secondAttribute="trailing" constant="16" id="hIe-8O-rzH"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="zng-i9-8If" secondAttribute="bottom" constant="10" id="ik7-gk-OPh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="label" destination="zng-i9-8If" id="b3R-Vg-2rU"/>
+                <outlet property="textField" destination="HdW-JK-I1t" id="6GE-iX-MtH"/>
+                <outlet property="warningLabel" destination="1iv-am-dax" id="fea-Wp-oxw"/>
+            </connections>
+            <point key="canvasLocation" x="-188" y="-132"/>
+        </tableViewCell>
+    </objects>
+</document>

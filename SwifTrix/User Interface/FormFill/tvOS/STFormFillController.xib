@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="9058" systemVersion="15B38b" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9048"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STFormFillController" customModule="SwifTrix" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="HoG-Qk-n69" id="Gv6-KR-NzT"/>
+                <outlet property="saveButton" destination="kso-gP-Uml" id="2ae-Ww-clJ"/>
+                <outlet property="tableView" destination="klD-0a-tbV" id="5vR-lG-EvZ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="0hb-Fz-6i6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="66" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="klD-0a-tbV">
+                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="tNc-DI-3l5"/>
+                        <outlet property="delegate" destination="-1" id="JLy-BO-GG9"/>
+                    </connections>
+                </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Hc-FL-0go">
+                    <rect key="frame" x="0.0" y="935" width="1920" height="145"/>
+                    <animations/>
+                    <items>
+                        <navigationItem id="AB3-Sk-S97">
+                            <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HoG-Qk-n69">
+                                <connections>
+                                    <action selector="cancelAction:" destination="-1" id="KYi-1B-Md0"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" systemItem="save" id="kso-gP-Uml">
+                                <connections>
+                                    <action selector="saveAction:" destination="-1" id="FOR-0V-iMe"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="klD-0a-tbV" secondAttribute="trailing" id="5bw-B4-owj"/>
+                <constraint firstItem="klD-0a-tbV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Kw9-FR-Xvo"/>
+                <constraint firstAttribute="bottom" secondItem="klD-0a-tbV" secondAttribute="bottom" id="L3W-dy-s7X"/>
+                <constraint firstItem="5Hc-FL-0go" firstAttribute="trailing" secondItem="klD-0a-tbV" secondAttribute="trailing" id="S3p-bn-HdX"/>
+                <constraint firstItem="5Hc-FL-0go" firstAttribute="leading" secondItem="klD-0a-tbV" secondAttribute="leading" id="YDb-nu-IG6"/>
+                <constraint firstAttribute="bottom" secondItem="5Hc-FL-0go" secondAttribute="bottom" id="l5P-Dm-spg"/>
+                <constraint firstItem="klD-0a-tbV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tKv-Gq-B9H"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -28,6 +28,33 @@
 		ED076CC61BCAB0FE00B53396 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED076CC01BCAB0FE00B53396 /* Page.swift */; };
 		ED076CC71BCAB0FE00B53396 /* Bookworm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED076CC11BCAB0FE00B53396 /* Bookworm+CoreDataProperties.swift */; };
 		ED076CC81BCAB0FE00B53396 /* Bookworm.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED076CC21BCAB0FE00B53396 /* Bookworm.swift */; };
+		ED2CAA341BD695B600472C3B /* STFormFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA2F1BD695B600472C3B /* STFormFillController.swift */; };
+		ED2CAA361BD695B600472C3B /* STFormFillControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA311BD695B600472C3B /* STFormFillControllerDelegate.swift */; };
+		ED2CAA371BD695B600472C3B /* STFormFillDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA321BD695B600472C3B /* STFormFillDataType.swift */; };
+		ED2CAA3D1BD6968C00472C3B /* STFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA3B1BD6968C00472C3B /* STFormField.swift */; };
+		ED2CAA3E1BD6968C00472C3B /* STFormFillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA3C1BD6968C00472C3B /* STFormFillCell.swift */; };
+		ED2CAA441BD6978800472C3B /* STFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA3B1BD6968C00472C3B /* STFormField.swift */; };
+		ED2CAA451BD6978800472C3B /* STFormFillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA3C1BD6968C00472C3B /* STFormFillCell.swift */; };
+		ED2CAA461BD6978800472C3B /* STFormFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA2F1BD695B600472C3B /* STFormFillController.swift */; };
+		ED2CAA471BD6978800472C3B /* STFormFillControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA311BD695B600472C3B /* STFormFillControllerDelegate.swift */; };
+		ED2CAA481BD6978800472C3B /* STFormFillDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA321BD695B600472C3B /* STFormFillDataType.swift */; };
+		ED2CAA4E1BD6987000472C3B /* STFormFillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2CAA4C1BD6987000472C3B /* STFormFillCell.xib */; };
+		ED2CAA4F1BD6987000472C3B /* STFormFillController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2CAA4D1BD6987000472C3B /* STFormFillController.xib */; };
+		ED2CAA531BD698DC00472C3B /* STFormFillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2CAA521BD698DC00472C3B /* STFormFillCell.xib */; };
+		ED2CAA551BD6993A00472C3B /* STFormFillController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2CAA541BD6993A00472C3B /* STFormFillController.xib */; };
+		ED2CAA581BD6A0CB00472C3B /* CrossPlatformDeclarations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA561BD6A0CB00472C3B /* CrossPlatformDeclarations.swift */; };
+		ED2CAA5A1BD6A3CD00472C3B /* STFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA3B1BD6968C00472C3B /* STFormField.swift */; };
+		ED2CAA5B1BD6A3CD00472C3B /* STFormFillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA3C1BD6968C00472C3B /* STFormFillCell.swift */; };
+		ED2CAA5C1BD6A3CD00472C3B /* STFormFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA2F1BD695B600472C3B /* STFormFillController.swift */; };
+		ED2CAA5D1BD6A3CD00472C3B /* STFormFillControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA311BD695B600472C3B /* STFormFillControllerDelegate.swift */; };
+		ED2CAA5E1BD6A3CD00472C3B /* STFormFillDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA321BD695B600472C3B /* STFormFillDataType.swift */; };
+		ED2CAA611BD6AD6800472C3B /* STFormFillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2CAA601BD6AD6800472C3B /* STFormFillCell.xib */; };
+		ED2CAA631BD6AEF400472C3B /* STFormFillController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2CAA621BD6AEF400472C3B /* STFormFillController.xib */; };
+		ED2CAADB1BD7AEAD00472C3B /* CrossPlatformDeclarations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA561BD6A0CB00472C3B /* CrossPlatformDeclarations.swift */; };
+		ED2CAADC1BD7AEB300472C3B /* CrossPlatformDeclarations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAA561BD6A0CB00472C3B /* CrossPlatformDeclarations.swift */; };
+		ED2CAAE61BD7BF0200472C3B /* STFormFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAAE51BD7BF0200472C3B /* STFormFieldDelegate.swift */; };
+		ED2CAAE71BD7BF0200472C3B /* STFormFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAAE51BD7BF0200472C3B /* STFormFieldDelegate.swift */; };
+		ED2CAAE81BD7BF0200472C3B /* STFormFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAAE51BD7BF0200472C3B /* STFormFieldDelegate.swift */; };
 		ED3D0F971BCA580F00D5695E /* SwifTrix.h in Headers */ = {isa = PBXBuildFile; fileRef = ED3D0F961BCA580F00D5695E /* SwifTrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED3D0F9E1BCA580F00D5695E /* SwifTrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3D0F931BCA580F00D5695E /* SwifTrix.framework */; };
 		ED3D0FA31BCA580F00D5695E /* SwifTrixKeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D0FA21BCA580F00D5695E /* SwifTrixKeychainTests.swift */; };
@@ -136,6 +163,19 @@
 		ED076CC01BCAB0FE00B53396 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		ED076CC11BCAB0FE00B53396 /* Bookworm+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bookworm+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ED076CC21BCAB0FE00B53396 /* Bookworm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookworm.swift; sourceTree = "<group>"; };
+		ED2CAA2F1BD695B600472C3B /* STFormFillController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STFormFillController.swift; path = "User Interface/FormFill/STFormFillController.swift"; sourceTree = "<group>"; };
+		ED2CAA311BD695B600472C3B /* STFormFillControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STFormFillControllerDelegate.swift; path = "User Interface/FormFill/STFormFillControllerDelegate.swift"; sourceTree = "<group>"; };
+		ED2CAA321BD695B600472C3B /* STFormFillDataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STFormFillDataType.swift; path = "User Interface/FormFill/STFormFillDataType.swift"; sourceTree = "<group>"; };
+		ED2CAA3B1BD6968C00472C3B /* STFormField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STFormField.swift; path = "User Interface/FormFill/STFormField.swift"; sourceTree = "<group>"; };
+		ED2CAA3C1BD6968C00472C3B /* STFormFillCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STFormFillCell.swift; path = "User Interface/FormFill/STFormFillCell.swift"; sourceTree = "<group>"; };
+		ED2CAA4C1BD6987000472C3B /* STFormFillCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STFormFillCell.xib; path = "User Interface/FormFill/iOS/STFormFillCell.xib"; sourceTree = "<group>"; };
+		ED2CAA4D1BD6987000472C3B /* STFormFillController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STFormFillController.xib; path = "User Interface/FormFill/iOS/STFormFillController.xib"; sourceTree = "<group>"; };
+		ED2CAA521BD698DC00472C3B /* STFormFillCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STFormFillCell.xib; path = "User Interface/FormFill/tvOS/STFormFillCell.xib"; sourceTree = "<group>"; };
+		ED2CAA541BD6993A00472C3B /* STFormFillController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STFormFillController.xib; path = "User Interface/FormFill/tvOS/STFormFillController.xib"; sourceTree = "<group>"; };
+		ED2CAA561BD6A0CB00472C3B /* CrossPlatformDeclarations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrossPlatformDeclarations.swift; path = "User Interface/CrossPlatformDeclarations.swift"; sourceTree = "<group>"; };
+		ED2CAA601BD6AD6800472C3B /* STFormFillCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STFormFillCell.xib; path = "User Interface/FormFill/OSX/STFormFillCell.xib"; sourceTree = "<group>"; };
+		ED2CAA621BD6AEF400472C3B /* STFormFillController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = STFormFillController.xib; path = "User Interface/FormFill/OSX/STFormFillController.xib"; sourceTree = "<group>"; };
+		ED2CAAE51BD7BF0200472C3B /* STFormFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STFormFieldDelegate.swift; path = "User Interface/FormFill/STFormFieldDelegate.swift"; sourceTree = "<group>"; };
 		ED3D0F931BCA580F00D5695E /* SwifTrix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwifTrix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED3D0F961BCA580F00D5695E /* SwifTrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwifTrix.h; sourceTree = "<group>"; };
 		ED3D0F981BCA580F00D5695E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -252,9 +292,70 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
+		ED2CAA381BD695B900472C3B /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CAA561BD6A0CB00472C3B /* CrossPlatformDeclarations.swift */,
+				ED2CAA3A1BD695C400472C3B /* Form Filling */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		ED2CAA3A1BD695C400472C3B /* Form Filling */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CAA4A1BD6980200472C3B /* iOS/tvOS */,
+			);
+			name = "Form Filling";
+			sourceTree = "<group>";
+		};
+		ED2CAA491BD697FB00472C3B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CAA4C1BD6987000472C3B /* STFormFillCell.xib */,
+				ED2CAA4D1BD6987000472C3B /* STFormFillController.xib */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		ED2CAA4A1BD6980200472C3B /* iOS/tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CAA5F1BD6AD3600472C3B /* MacOS */,
+				ED2CAA4B1BD6981800472C3B /* tvOS */,
+				ED2CAA491BD697FB00472C3B /* iOS */,
+				ED2CAA3B1BD6968C00472C3B /* STFormField.swift */,
+				ED2CAAE51BD7BF0200472C3B /* STFormFieldDelegate.swift */,
+				ED2CAA3C1BD6968C00472C3B /* STFormFillCell.swift */,
+				ED2CAA2F1BD695B600472C3B /* STFormFillController.swift */,
+				ED2CAA311BD695B600472C3B /* STFormFillControllerDelegate.swift */,
+				ED2CAA321BD695B600472C3B /* STFormFillDataType.swift */,
+			);
+			name = iOS/tvOS;
+			sourceTree = "<group>";
+		};
+		ED2CAA4B1BD6981800472C3B /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CAA521BD698DC00472C3B /* STFormFillCell.xib */,
+				ED2CAA541BD6993A00472C3B /* STFormFillController.xib */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		ED2CAA5F1BD6AD3600472C3B /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CAA601BD6AD6800472C3B /* STFormFillCell.xib */,
+				ED2CAA621BD6AEF400472C3B /* STFormFillController.xib */,
+			);
+			name = MacOS;
+			sourceTree = "<group>";
+		};
 		ED3D0F891BCA580F00D5695E = {
 			isa = PBXGroup;
 			children = (
+				ED2CAA381BD695B900472C3B /* User Interface */,
 				ED00505C1BD452190043528B /* Network+Database */,
 				EDFF67B81BD1165E00E5C9EC /* Security */,
 				EDFF67A81BD110FF00E5C9EC /* Network */,
@@ -591,6 +692,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2CAA4E1BD6987000472C3B /* STFormFillCell.xib in Resources */,
+				ED2CAA4F1BD6987000472C3B /* STFormFillController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +708,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2CAA531BD698DC00472C3B /* STFormFillCell.xib in Resources */,
+				ED2CAA551BD6993A00472C3B /* STFormFillController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +724,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2CAA611BD6AD6800472C3B /* STFormFillCell.xib in Resources */,
+				ED2CAA631BD6AEF400472C3B /* STFormFillController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,21 +743,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2CAADB1BD7AEAD00472C3B /* CrossPlatformDeclarations.swift in Sources */,
 				EDFF67BA1BD1168400E5C9EC /* STKeychain.swift in Sources */,
+				ED2CAA3E1BD6968C00472C3B /* STFormFillCell.swift in Sources */,
+				ED2CAA361BD695B600472C3B /* STFormFillControllerDelegate.swift in Sources */,
 				ED0050601BD452B90043528B /* STJSONParser.swift in Sources */,
 				ED0050501BD4331B0043528B /* STNetworkError.swift in Sources */,
 				EDFF67C21BD1200100E5C9EC /* STKeychain+Items.swift in Sources */,
 				EDFF67AF1BD1117D00E5C9EC /* STDatabase+ChangeManagement.swift in Sources */,
+				ED2CAA3D1BD6968C00472C3B /* STFormField.swift in Sources */,
 				EDFF67AA1BD1113D00E5C9EC /* STNetworkInterface.swift in Sources */,
 				EDFF67CB1BD1391B00E5C9EC /* STKeychainInternetPassword.swift in Sources */,
 				EDFF67B61BD1139400E5C9EC /* STNetworkInterface+SessionDelegate.swift in Sources */,
 				EDFF67C81BD135B900E5C9EC /* STKeychainGenericPassword.swift in Sources */,
 				ED00504E1BD4329D0043528B /* STJSONPackage.swift in Sources */,
+				ED2CAAE61BD7BF0200472C3B /* STFormFieldDelegate.swift in Sources */,
 				EDFF67B11BD1117D00E5C9EC /* STDatabase+FetchRequests.swift in Sources */,
 				EDFF67BF1BD117B000E5C9EC /* STKeychainError.swift in Sources */,
 				ED0050551BD43C2A0043528B /* STJSONError.swift in Sources */,
+				ED2CAA341BD695B600472C3B /* STFormFillController.swift in Sources */,
 				EDFF67C51BD1358200E5C9EC /* STKeychainItem.swift in Sources */,
 				EDFF67B31BD1117D00E5C9EC /* STDatabase+ObjectCreation.swift in Sources */,
+				ED2CAA371BD695B600472C3B /* STFormFillDataType.swift in Sources */,
 				ED3D0FAE1BCA58A000D5695E /* STDatabase.swift in Sources */,
 				EDFF67CE1BD13CD400E5C9EC /* STKeychainCertificate.swift in Sources */,
 			);
@@ -691,6 +805,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2CAADC1BD7AEB300472C3B /* CrossPlatformDeclarations.swift in Sources */,
+				ED2CAA441BD6978800472C3B /* STFormField.swift in Sources */,
+				ED2CAA451BD6978800472C3B /* STFormFillCell.swift in Sources */,
+				ED2CAA461BD6978800472C3B /* STFormFillController.swift in Sources */,
+				ED2CAA471BD6978800472C3B /* STFormFillControllerDelegate.swift in Sources */,
+				ED2CAA481BD6978800472C3B /* STFormFillDataType.swift in Sources */,
 				ED0050591BD4474D0043528B /* STJSONPackage.swift in Sources */,
 				ED0050621BD452B90043528B /* STJSONParser.swift in Sources */,
 				ED00505A1BD4474D0043528B /* STNetworkError.swift in Sources */,
@@ -699,6 +819,7 @@
 				ED59EE9F1BD27C1300A8857E /* STKeychainError.swift in Sources */,
 				ED59EEA01BD27C1300A8857E /* STKeychain+Items.swift in Sources */,
 				ED59EEA11BD27C1300A8857E /* STKeychainItem.swift in Sources */,
+				ED2CAAE81BD7BF0200472C3B /* STFormFieldDelegate.swift in Sources */,
 				ED59EEA21BD27C1300A8857E /* STKeychainGenericPassword.swift in Sources */,
 				ED59EEA31BD27C1300A8857E /* STKeychainInternetPassword.swift in Sources */,
 				ED59EEA41BD27C1300A8857E /* STKeychainCertificate.swift in Sources */,
@@ -723,6 +844,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2CAA5A1BD6A3CD00472C3B /* STFormField.swift in Sources */,
+				ED2CAA5B1BD6A3CD00472C3B /* STFormFillCell.swift in Sources */,
+				ED2CAA5C1BD6A3CD00472C3B /* STFormFillController.swift in Sources */,
+				ED2CAA5D1BD6A3CD00472C3B /* STFormFillControllerDelegate.swift in Sources */,
+				ED2CAA5E1BD6A3CD00472C3B /* STFormFillDataType.swift in Sources */,
 				ED0050561BD447440043528B /* STJSONPackage.swift in Sources */,
 				ED0050611BD452B90043528B /* STJSONParser.swift in Sources */,
 				ED0050571BD447440043528B /* STNetworkError.swift in Sources */,
@@ -732,9 +858,11 @@
 				EDFF68161BD14C1500E5C9EC /* STKeychainError.swift in Sources */,
 				EDFF68171BD14C1500E5C9EC /* STKeychain+Items.swift in Sources */,
 				EDFF68181BD14C1500E5C9EC /* STKeychainItem.swift in Sources */,
+				ED2CAAE71BD7BF0200472C3B /* STFormFieldDelegate.swift in Sources */,
 				EDFF68191BD14C1500E5C9EC /* STKeychainGenericPassword.swift in Sources */,
 				EDFF681A1BD14C1500E5C9EC /* STKeychainInternetPassword.swift in Sources */,
 				EDFF681B1BD14C1500E5C9EC /* STKeychainCertificate.swift in Sources */,
+				ED2CAA581BD6A0CB00472C3B /* CrossPlatformDeclarations.swift in Sources */,
 				EDFF681C1BD14C1500E5C9EC /* STNetworkInterface.swift in Sources */,
 				EDFF681D1BD14C1500E5C9EC /* STNetworkInterface+SessionDelegate.swift in Sources */,
 				EDFF681E1BD14C1500E5C9EC /* STDatabase.swift in Sources */,
