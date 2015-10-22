@@ -50,7 +50,13 @@ class FirstViewController: UIViewController, STFormFillControllerDelegate {
         
         formFields.append(STFormField(label: "Name", isRequired: true, dataType: .UnformattedText))
         formFields.append(STFormField(label: "E-Mail", isRequired: true, dataType: .EMail))
-        formFields.append(STFormField(label: "Birth date", isRequired: false, dataType: .Date))
+        
+        // A form field with a very simple "value selection" prototype
+        formFields.append(STFormField(label: "Birth date", isRequired: false, dataType: .Date, additionalRequirements: [], customFormFieldAction: {
+            (inout formField: STFormField) -> Void in formField.value="1/2/34"
+        }))
+        
+        // A form field with custom additional requirements for unformatted text
         formFields.append(STFormField(label: "Gender", isRequired: false, dataType: .UnformattedText, additionalRequirements: [({ return $0 == "Male" || $0 == "Female"
         }, "You were supposed to enter 'Male' or 'Female'")]))
         

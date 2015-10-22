@@ -304,7 +304,15 @@
 		ED2CAA3A1BD695C400472C3B /* Form Filling */ = {
 			isa = PBXGroup;
 			children = (
-				ED2CAA4A1BD6980200472C3B /* iOS/tvOS */,
+				ED2CAA5F1BD6AD3600472C3B /* MacOS */,
+				ED2CAA4B1BD6981800472C3B /* tvOS */,
+				ED2CAA491BD697FB00472C3B /* iOS */,
+				ED2CAA3B1BD6968C00472C3B /* STFormField.swift */,
+				ED2CAAE51BD7BF0200472C3B /* STFormFieldDelegate.swift */,
+				ED2CAA3C1BD6968C00472C3B /* STFormFillCell.swift */,
+				ED2CAA2F1BD695B600472C3B /* STFormFillController.swift */,
+				ED2CAA311BD695B600472C3B /* STFormFillControllerDelegate.swift */,
+				ED2CAA321BD695B600472C3B /* STFormFillDataType.swift */,
 			);
 			name = "Form Filling";
 			sourceTree = "<group>";
@@ -316,22 +324,6 @@
 				ED2CAA4D1BD6987000472C3B /* STFormFillController.xib */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		ED2CAA4A1BD6980200472C3B /* iOS/tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				ED2CAA5F1BD6AD3600472C3B /* MacOS */,
-				ED2CAA4B1BD6981800472C3B /* tvOS */,
-				ED2CAA491BD697FB00472C3B /* iOS */,
-				ED2CAA3B1BD6968C00472C3B /* STFormField.swift */,
-				ED2CAAE51BD7BF0200472C3B /* STFormFieldDelegate.swift */,
-				ED2CAA3C1BD6968C00472C3B /* STFormFillCell.swift */,
-				ED2CAA2F1BD695B600472C3B /* STFormFillController.swift */,
-				ED2CAA311BD695B600472C3B /* STFormFillControllerDelegate.swift */,
-				ED2CAA321BD695B600472C3B /* STFormFillDataType.swift */,
-			);
-			name = iOS/tvOS;
 			sourceTree = "<group>";
 		};
 		ED2CAA4B1BD6981800472C3B /* tvOS */ = {

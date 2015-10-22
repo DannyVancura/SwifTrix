@@ -73,7 +73,7 @@ public class STFormFillController: UIViewController, UITableViewDataSource, UITa
     
     // MARK: Private variables
     private let formFillCellReuseIdentifier: String = "SwifTrix.ReuseIdentifier.STFormFillCell"
-    
+    private var cellsForFormFields: [STFormField:STFormFillCell] = [:]
     
     // MARK: - View setup
     public override func viewDidLoad() {
@@ -159,10 +159,14 @@ public class STFormFillController: UIViewController, UITableViewDataSource, UITa
         // Set the form field (which will then automatically set label, text, ...)
         tableViewCell.formField = formField
         
+        self.cellsForFormFields.updateValue(tableViewCell, forKey: formField)
         return tableViewCell
     }
     
     func formField(formField: STFormField, valueDidChange value: String?) {
+        // Force update for table view cell:
+        self.cellsForFormFields[formField]?.formField = formField
+        
         // Check if all form fields contain valid values and enable save button if all required fields are valid
         for field in (self.formFields ?? []) {
             if field.isRequired && !field.isValueValid() {
@@ -197,7 +201,7 @@ public class STFormFillController: UIViewController, UITableViewDataSource, UITa
     }
     
     // MARK: - Keyboard management
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    public override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
         STFormFillCell.activeField?.resignFirstResponder()
         STFormFillCell.activeField = nil

@@ -130,6 +130,12 @@ class STFormFillCell: UITableViewCell, UITextFieldDelegate {
     // MARK: - Text field delegate methods
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        // If there was a custom function provided, call this instead of editing the text field (i.e. the text field acts as a button for the custom action)
+        if var formField = self.formField, let customAction = formField.customFormFieldAction {
+            customAction(&formField)
+            return false
+        }
+        
         STFormFillCell.activeField = textField
         return true
     }
