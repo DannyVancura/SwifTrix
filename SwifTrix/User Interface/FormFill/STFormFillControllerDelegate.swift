@@ -24,11 +24,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
+#if os(OSX)
+    import Cocoa
+#else
+    import UIKit
+#endif
 
 /**
  View controllers that present an STFormFillController should conform to this protocol to receive the user's save- or cancel-actions in the form fill controller that you present.
  */
+@objc
 public protocol STFormFillControllerDelegate {
     /**
      Delegate method that is called once the user tapped on the save button.
@@ -44,4 +49,32 @@ public protocol STFormFillControllerDelegate {
      - parameter controller: The form fill controller that was presented to the user and whose cancel button was tapped
      */
     func formFillControllerDidCancel(controller: STFormFillController)
+    
+    /**
+     Optional delegate method that can be implemented to return a custom table view cell. The provided NIB must contain a subclass of STFormFillCell.
+     
+     You can provide different types of cells for different form fields.
+     
+     - note: Implementing this method will only have an effect if you also implement formFillController(_, shouldUseReuseIdentifierForFormField:)
+     
+     - parameter controller: The Controller that is about to present a table view cell on its table view for the given form field.
+     - parameter formField: The form field for which a NIB should be provided.
+     
+     - returns: A NIB that contains the customized STFormFillCell subclass
+     */
+    optional func formFillController(controller: STFormFillController, shouldUseNibForFormField formField: STFormField) -> UINib
+    
+    /**
+     Optional delegate method that can be implemented to return the reuse identifier for a custom table view cell. The provided NIB must contain a subclass of STFormFillCell.
+     
+     You can provide different types of cells for different form fields.
+     
+     - note: Implementing this method will only have an effect if you also implement formFillController(_, shouldUseNibForFormField:)
+     
+     - parameter controller: The Controller that is about to present a table view cell on its table view for the given form field.
+     - parameter formField: The form field for which a reuse identifier should be provided.
+     
+     - returns: The reuse identifier for a table view cell.
+     */
+    optional func formFillController(controller: STFormFillController, shouldUseReuseIdentifierForFormField formField: STFormField) -> String
 }

@@ -33,11 +33,11 @@
 /**
  An STFormFillCell represents a cell inside an STFormFillController and contains an STFormField. If any text is entered in the cell's text field, it will check for compliance to provided requirements for the text and display a warning if necessary.
  */
-class STFormFillCell: UITableViewCell, UITextFieldDelegate {
+public class STFormFillCell: UITableViewCell, UITextFieldDelegate {
     /**
      Used to display, which information the user is supposed to enter
      */
-    @IBOutlet weak var label: UILabel? {
+    @IBOutlet public weak var label: UILabel? {
         didSet{
             label?.text = formField?.label
         }
@@ -46,7 +46,7 @@ class STFormFillCell: UITableViewCell, UITextFieldDelegate {
     /**
      Used by the user to change the form field item's value
      */
-    @IBOutlet weak var textField: UITextField? {
+    @IBOutlet public weak var textField: UITextField? {
         didSet{
             self.textField?.delegate = self
             if let value = formField?.value {
@@ -65,7 +65,7 @@ class STFormFillCell: UITableViewCell, UITextFieldDelegate {
     /**
      Used to display a warning, if invalid text was entered
      */
-    @IBOutlet weak var warningLabel: UILabel?
+    @IBOutlet public weak var warningLabel: UILabel?
     
     /**
      The form field associated with this cell item. Setting this value also changes the text inside label and form field (if a value was already provided in the `formField`'s value property).
@@ -121,7 +121,7 @@ class STFormFillCell: UITableViewCell, UITextFieldDelegate {
     */
     static var activeField: UITextField?
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
         STFormFillCell.activeField?.resignFirstResponder()
         STFormFillCell.activeField = nil
@@ -129,7 +129,7 @@ class STFormFillCell: UITableViewCell, UITextFieldDelegate {
     
     // MARK: - Text field delegate methods
     
-    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+    public func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         // If there was a custom function provided, call this instead of editing the text field (i.e. the text field acts as a button for the custom action)
         if var formField = self.formField, let customAction = formField.customFormFieldAction {
             customAction(&formField)
@@ -140,7 +140,7 @@ class STFormFillCell: UITableViewCell, UITextFieldDelegate {
         return true
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    public func textFieldShouldReturn(textField: UITextField) -> Bool {
         if STFormFillCell.activeField == textField {
             STFormFillCell.activeField?.resignFirstResponder()
         }
@@ -148,13 +148,13 @@ class STFormFillCell: UITableViewCell, UITextFieldDelegate {
         return true
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    public func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         let text = textField.text ?? ""
         let fullString = NSString(string: text).stringByReplacingCharactersInRange(range, withString: string)
         
         self.formField?.value = fullString
         self.checkRequirements()
         
-        return true
+        return false
     }
 }

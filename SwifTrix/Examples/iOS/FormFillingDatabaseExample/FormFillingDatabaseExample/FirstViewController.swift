@@ -41,6 +41,25 @@ class FirstViewController: UIViewController, STFormFillControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.formFillController?.formFields = self.createEmptyFormFields()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "embedFormFillController" {
+            // Get reference to the form fill controller in the container ver
+            guard let formFillController = segue.destinationViewController as? STFormFillController else {
+                return
+            }
+            
+            self.formFillController = formFillController
+            self.formFillController?.delegate = self
+        }
+    }
+    
+    // MARK: - Sample implementation of some table view cells
+    
     /**
      Creates a set of four form fields
      */
@@ -58,27 +77,12 @@ class FirstViewController: UIViewController, STFormFillControllerDelegate {
         
         // A form field with custom additional requirements for unformatted text
         formFields.append(STFormField(label: "Gender", isRequired: false, dataType: .UnformattedText, additionalRequirements: [({ return $0 == "Male" || $0 == "Female"
-        }, "You were supposed to enter 'Male' or 'Female'")]))
+            }, "You were supposed to enter 'Male' or 'Female'")]))
         
         return formFields
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.formFillController?.formFields = self.createEmptyFormFields()
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "embedFormFillController" {
-            // Get reference to the form fill controller in the container ver
-            guard let formFillController = segue.destinationViewController as? STFormFillController else {
-                return
-            }
-            
-            self.formFillController = formFillController
-            self.formFillController?.delegate = self
-        }
-    }
+    // MARK: - Implementation for the save- and cancel- button actions
     
     func formFillController(controller: STFormFillController, didSave savedItems: [STFormField]?) {
         // Save the entries in a new object in the database
@@ -99,6 +103,16 @@ class FirstViewController: UIViewController, STFormFillControllerDelegate {
     func formFillControllerDidCancel(controller: STFormFillController) {
         // Clear the form fields by overwriting them with new ones
         self.formFillController?.formFields = self.createEmptyFormFields()
+    }
+    
+    // MARK: - Implementation to load your own table view cell style
+    
+    func formFillController(controller: STFormFillController, shouldUseNibForFormField formField: STFormField) -> UINib {
+        return UINib(nibName: "CustomFormFillCell", bundle: nil)
+    }
+    
+    func formFillController(controller: STFormFillController, shouldUseReuseIdentifierForFormField formField: STFormField) -> String {
+        return "example.cell.reuseID"
     }
 }
 

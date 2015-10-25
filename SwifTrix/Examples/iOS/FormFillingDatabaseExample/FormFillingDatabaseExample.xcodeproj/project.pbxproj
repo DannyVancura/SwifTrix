@@ -20,6 +20,7 @@
 		ED2CAACD1BD70E0C00472C3B /* FormFilling.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAACB1BD70E0C00472C3B /* FormFilling.xcdatamodeld */; };
 		ED2CAAD01BD70E7B00472C3B /* FormFilling+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAACE1BD70E7B00472C3B /* FormFilling+CoreDataProperties.swift */; };
 		ED2CAAD11BD70E7B00472C3B /* FormFilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CAACF1BD70E7B00472C3B /* FormFilling.swift */; };
+		ED54714D1BDD4D2500BEADB6 /* CustomFormFillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED54714C1BDD4D2500BEADB6 /* CustomFormFillCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		ED2CAACC1BD70E0C00472C3B /* FormFilling.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FormFilling.xcdatamodel; sourceTree = "<group>"; };
 		ED2CAACE1BD70E7B00472C3B /* FormFilling+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FormFilling+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ED2CAACF1BD70E7B00472C3B /* FormFilling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormFilling.swift; sourceTree = "<group>"; };
+		ED54714C1BDD4D2500BEADB6 /* CustomFormFillCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomFormFillCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				ED2CAA791BD6E9EB00472C3B /* Assets.xcassets */,
 				ED2CAA7B1BD6E9EB00472C3B /* LaunchScreen.storyboard */,
 				ED2CAA7E1BD6E9EB00472C3B /* Info.plist */,
+				ED54714C1BDD4D2500BEADB6 /* CustomFormFillCell.xib */,
 			);
 			path = FormFillingDatabaseExample;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED2CAA7D1BD6E9EB00472C3B /* LaunchScreen.storyboard in Resources */,
+				ED54714D1BDD4D2500BEADB6 /* CustomFormFillCell.xib in Resources */,
 				ED2CAA7A1BD6E9EB00472C3B /* Assets.xcassets in Resources */,
 				ED2CAA781BD6E9EB00472C3B /* Main.storyboard in Resources */,
 			);

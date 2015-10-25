@@ -151,7 +151,7 @@ public class STFormFillController: UIViewController, UITableViewDataSource, UITa
             return UITableViewCell()
         }
         
-        guard let tableViewCell: STFormFillCell = tableView.dequeueReusableCellWithIdentifier(formFillCellReuseIdentifier) as? STFormFillCell else {
+        guard let tableViewCell = self.dequeueTableViewCell(tableView, formField: formField) as? STFormFillCell else {
             print("Warning: Could not load tableViewCell from NIB.")
             return UITableViewCell()
         }
@@ -161,6 +161,31 @@ public class STFormFillController: UIViewController, UITableViewDataSource, UITa
         
         self.cellsForFormFields.updateValue(tableViewCell, forKey: formField)
         return tableViewCell
+    }
+    
+    /**
+     Creates a table view cell based on the NIB and reuse identifier provided by the delegate or on the default implementation otherwise.
+     
+     - parameter tableView: The table view for which the cell will be created (and registered if necessary).
+     - parameter formField: The form field which provides the information for the table view cell.
+     - returns: A newly created table view cell
+     */
+    private func dequeueTableViewCell(tableView: UITableView, formField: STFormField) -> UITableViewCell? {
+        // If a custom cell and identifier have been provided, use this ...
+        if let customizedCell = self.delegate?.formFillController?(self, shouldUseNibForFormField: formField), customizedReuseIdentifier = self.delegate?.formFillController?(self, shouldUseReuseIdentifierForFormField: formField) {
+            
+            // Check if the custom cell has already been registered
+            if tableView.dequeueReusableCellWithIdentifier(customizedReuseIdentifier) == nil {
+                tableView.registerNib(customizedCell, forCellReuseIdentifier: customizedReuseIdentifier)
+            }
+            
+            // Dequeue the cell and return it
+            return (tableView.dequeueReusableCellWithIdentifier(customizedReuseIdentifier) as? STFormFillCell) ?? nil
+            
+            // ... otherwise use the default
+        } else {
+            return (tableView.dequeueReusableCellWithIdentifier(formFillCellReuseIdentifier) as? STFormFillCell) ?? nil
+        }
     }
     
     func formField(formField: STFormField, valueDidChange value: String?) {
